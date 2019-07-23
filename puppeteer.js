@@ -87,16 +87,18 @@ const sleep = seconds =>
 
         
         console.log('no more results')
-        /*
+        
         const showMores = await page.$$('.moreLink')
         for (showMore of showMores) {
           await showMore.click();
         }
 
+        console.log('no more show mores')
+
         const options = await page.$$('.expandSessionImg')
         for (option of options) {
           await option.click();
-        }*/
+        }
 
         await sleep(5)
 
