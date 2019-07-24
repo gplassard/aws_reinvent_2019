@@ -1,5 +1,7 @@
 import { Session } from "../model";
 import React from 'react';
+import { TableRow, TableCell, Chip } from "@material-ui/core";
+import {Star, Delete} from "@material-ui/icons";
 
 interface Props {
     session: Session
@@ -8,19 +10,22 @@ interface Props {
 const SessionComp: React.FC<Props> = (props: Props) => {
     const session = props.session;
     return (
-      <tr> 
-        <td/>
-        <td>{session.times || session.day}</td>
-        <td>{session.hotel}</td>
-        <td>{session.type}, {session.level}</td>
-        <td>
+      <TableRow> 
+        <TableCell><Star></Star><Delete></Delete></TableCell>
+        <TableCell>{session.times || session.day}</TableCell>
+        <TableCell>{session.hotel}</TableCell>
+        <TableCell>
+          <Chip label={ session.type} color="primary"/>
+          <Chip label={ session.level} className={session.level}/>
+        </TableCell>
+        <TableCell>
             <a href={`https://www.portal.reinvent.awsevents.com/connect/search.ww?trk=typed_bookmarked#loadSearch-searchPhrase="${session.abbr}"&searchType=session`}>
                 {session.abbr}
             </a>
             {session.title}
-        </td>
-        <td>{session.abstract}</td>
-      </tr>
+        </TableCell>
+        <TableCell>{session.abstract}</TableCell>
+      </TableRow>
     );
   }
   

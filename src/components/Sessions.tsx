@@ -1,6 +1,7 @@
 import { Session } from "../model";
 import React from 'react';
 import SessionComp from "./SessionComp";
+import { Table, TableHead, TableRow, TableCell, TableBody } from "@material-ui/core";
 
 interface Props {
     sessions: Session[]
@@ -8,24 +9,24 @@ interface Props {
 
 const Sessions: React.FC<Props> = (props: Props) => {
     return (
-      <table>
-          <thead>
-              <tr>
-                  <td/>
-                  <td>Day</td>
-                  <td>Hotel</td>
-                  <td/>
-                  <td>Title</td>
-                  <td>Abstract</td>
-              </tr>
-          </thead>
-          <tbody>
+      <Table>
+          <TableHead>
+              <TableRow>
+                  <TableCell/>
+                  <TableCell>Day</TableCell>
+                  <TableCell>Hotel</TableCell>
+                  <TableCell/>
+                  <TableCell>Title</TableCell>
+                  <TableCell>Abstract</TableCell>
+              </TableRow>
+          </TableHead>
+          <TableBody>
               {props.sessions.map(session => 
                     <SessionComp key={session.id} session={session}></SessionComp>
                 )}
-          </tbody>
+          </TableBody>
 
-      </table>
+      </Table>
     );
   }
   
