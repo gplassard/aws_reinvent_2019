@@ -22,6 +22,7 @@ const SessionComp: React.FC<Props> = (props: Props) => {
             <a href={`https://www.portal.reinvent.awsevents.com/connect/search.ww?trk=typed_bookmarked#loadSearch-searchPhrase="${session.abbr}"&searchType=session`}>
                 {session.abbr}
             </a>
+            {' '}
             {session.title}
         </TableCell>
         <TableCell>{session.abstract}</TableCell>
