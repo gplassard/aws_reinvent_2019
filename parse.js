@@ -6,8 +6,8 @@ const moment = require('moment');
 let sessions = [];
 
 fs.readdirSync("sessions").forEach(fileName => {
-    //const [day, hotel, level] = fileName.split("_").map(n => n.replace(".html", "")); //?
-    const [day, hotel, level] = ["unknown","unknown","unknown"]
+    const [level] = fileName.split("_").map(n => n.replace(".html", "")); //?
+    const [hotel, day] = ["unknown","unknown"]
 
     const file = fs.readFileSync('sessions/' + fileName, {encoding: 'utf-8'});
     const $ = cheerio.load(file)
