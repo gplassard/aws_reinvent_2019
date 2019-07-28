@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/aws_reinvent_2019/static/css/main.f4383750.chunk.css",
-    "main.js": "/aws_reinvent_2019/static/js/main.db6f4deb.chunk.js",
-    "main.js.map": "/aws_reinvent_2019/static/js/main.db6f4deb.chunk.js.map",
+    "main.js": "/aws_reinvent_2019/static/js/main.0d9f4a08.chunk.js",
+    "main.js.map": "/aws_reinvent_2019/static/js/main.0d9f4a08.chunk.js.map",
     "runtime~main.js": "/aws_reinvent_2019/static/js/runtime~main.7e1749d5.js",
     "runtime~main.js.map": "/aws_reinvent_2019/static/js/runtime~main.7e1749d5.js.map",
     "static/js/2.f4a006d2.chunk.js": "/aws_reinvent_2019/static/js/2.f4a006d2.chunk.js",
     "static/js/2.f4a006d2.chunk.js.map": "/aws_reinvent_2019/static/js/2.f4a006d2.chunk.js.map",
     "index.html": "/aws_reinvent_2019/index.html",
-    "precache-manifest.66fb37db1b5f4a01169944d23a241132.js": "/aws_reinvent_2019/precache-manifest.66fb37db1b5f4a01169944d23a241132.js",
+    "precache-manifest.62879a7aa9d636a64e55f155e665b107.js": "/aws_reinvent_2019/precache-manifest.62879a7aa9d636a64e55f155e665b107.js",
     "service-worker.js": "/aws_reinvent_2019/service-worker.js",
     "static/css/main.f4383750.chunk.css.map": "/aws_reinvent_2019/static/css/main.f4383750.chunk.css.map"
   }
