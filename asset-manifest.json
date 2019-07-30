@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/aws_reinvent_2019/static/css/main.f4383750.chunk.css",
-    "main.js": "/aws_reinvent_2019/static/js/main.0d9f4a08.chunk.js",
-    "main.js.map": "/aws_reinvent_2019/static/js/main.0d9f4a08.chunk.js.map",
+    "main.css": "/aws_reinvent_2019/static/css/main.77a26f16.chunk.css",
+    "main.js": "/aws_reinvent_2019/static/js/main.0f8e88b3.chunk.js",
+    "main.js.map": "/aws_reinvent_2019/static/js/main.0f8e88b3.chunk.js.map",
     "runtime~main.js": "/aws_reinvent_2019/static/js/runtime~main.7e1749d5.js",
     "runtime~main.js.map": "/aws_reinvent_2019/static/js/runtime~main.7e1749d5.js.map",
-    "static/js/2.f4a006d2.chunk.js": "/aws_reinvent_2019/static/js/2.f4a006d2.chunk.js",
-    "static/js/2.f4a006d2.chunk.js.map": "/aws_reinvent_2019/static/js/2.f4a006d2.chunk.js.map",
+    "static/js/2.17faa4ef.chunk.js": "/aws_reinvent_2019/static/js/2.17faa4ef.chunk.js",
+    "static/js/2.17faa4ef.chunk.js.map": "/aws_reinvent_2019/static/js/2.17faa4ef.chunk.js.map",
     "index.html": "/aws_reinvent_2019/index.html",
-    "precache-manifest.62879a7aa9d636a64e55f155e665b107.js": "/aws_reinvent_2019/precache-manifest.62879a7aa9d636a64e55f155e665b107.js",
+    "precache-manifest.f127e20a7bd7536f1d12e761f2df02db.js": "/aws_reinvent_2019/precache-manifest.f127e20a7bd7536f1d12e761f2df02db.js",
     "service-worker.js": "/aws_reinvent_2019/service-worker.js",
-    "static/css/main.f4383750.chunk.css.map": "/aws_reinvent_2019/static/css/main.f4383750.chunk.css.map"
+    "static/css/main.77a26f16.chunk.css.map": "/aws_reinvent_2019/static/css/main.77a26f16.chunk.css.map"
   }
 }
