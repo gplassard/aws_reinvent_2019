@@ -3,19 +3,14 @@ import {AppBar, Toolbar, Typography, Menu, MenuItem} from "@material-ui/core";
 import { AccountCircle } from '@material-ui/icons';
 import './Navigation.css';
 import { auth } from '../services/FirebaseService';
+import {User} from "firebase";
 
 interface Props {
+    loggedUser: User | null
 }
 
 const Navigation: React.FC<Props> = (props: Props) => {
     const [anchorEl, setAnchorEl] = React.useState(null);
-    const [loggedUser, setLoggedUser]= React.useState(auth.currentUser);
-    
-    React.useEffect(() => {
-        return auth.onAuthStateChanged((user) => {
-            setLoggedUser(user);
-        })
-    }, []);
 
     function handleClick(event: any) {
       setAnchorEl(event.currentTarget);
@@ -39,7 +34,7 @@ const Navigation: React.FC<Props> = (props: Props) => {
         <AppBar position="static">
             <Toolbar>
                 <Typography className="title">AWS-REINVENT-2019</Typography>
-                {loggedUser ? <Typography >{loggedUser.uid}</Typography> : null}
+                {props.loggedUser ? <Typography >{props.loggedUser.uid}</Typography> : null}
                 <AccountCircle onClick={handleClick}></AccountCircle>
                 <Menu id="simple-menu"
                     anchorEl={anchorEl}
@@ -48,7 +43,7 @@ const Navigation: React.FC<Props> = (props: Props) => {
                     onClose={handleClose}
                 >
                     {
-                        loggedUser === null ?
+                        props.loggedUser === null ?
                             <MenuItem onClick={login}>Login</MenuItem> :
                             <MenuItem onClick={logout}>Logout</MenuItem>
                     }
@@ -56,6 +51,6 @@ const Navigation: React.FC<Props> = (props: Props) => {
             </Toolbar>
         </AppBar>
     );
-  }
+  };
   
-  export default Navigation;
+export default Navigation;
