@@ -3,6 +3,7 @@ import './App.css';
 import { Session, Filters } from './model';
 import Sessions from './components/Sessions';
 import SessionFilters from './components/SessionFilters';
+import Navigation from './components/Navigation';
 
 interface Props {
   sessions: Session[]
@@ -54,6 +55,7 @@ const App: React.FC<Props> = (props: Props) => {
 
   return (
     <React.Fragment>
+      <Navigation></Navigation>
       <SessionFilters sessions={props.sessions} onFiltersChange={onFiltersChange} sessionsCount={state.filteredSessions.length}></SessionFilters>
       <Sessions sessions={state.filteredSessions}></Sessions>
     </React.Fragment>
