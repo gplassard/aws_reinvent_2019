@@ -63,7 +63,7 @@ const sleep = seconds =>
 
   const levels = _.uniqBy(await page.evaluate(() => {
     const inputs = [...document.querySelectorAll('#profileItem_18667_tr .filter-item')]
-    return inputs.map(input => ({ id: input.children[0].getAttribute('id'), label: input.textContent.trim().split(' – ')[1] }))
+    return inputs.map(input => ({ id: input.children[0].getAttribute('id'), label: input.textContent.trim().split(' - ')[1] }))
   }), 'id')
 
   //console.log(days)
