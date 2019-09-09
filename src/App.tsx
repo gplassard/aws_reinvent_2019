@@ -46,7 +46,7 @@ const App: React.FC<Props> = (props: Props) => {
     filteredSessions: props.sessions, 
     deleted: {},
     favorites: {}
-  });
+  } as State);
 
   const [loggedUser, setLoggedUser]= React.useState(auth.currentUser);
 
@@ -68,11 +68,22 @@ const App: React.FC<Props> = (props: Props) => {
     console.table("new filters", filters)
   };
 
+  const onDelete = (id: string, isDelete: boolean) => {
+    state.deleted[id] = isDelete;
+    setState({...state});
+  }
+
+  const onFavorite = (id: string, isFavorite: boolean) => {
+    state.favorites[id] = isFavorite;
+    setState({...state});
+  }
+
   return (
     <React.Fragment>
       <Navigation loggedUser={loggedUser}></Navigation>
       <SessionFilters sessions={props.sessions} onFiltersChange={onFiltersChange} sessionsCount={state.filteredSessions.length}></SessionFilters>
-      <Sessions sessions={state.filteredSessions}></Sessions>
+      <Sessions sessions={state.filteredSessions} favorites={state.favorites} deleted={state.deleted} 
+        onDelete={onDelete} onFavorite={onFavorite}></Sessions>
     </React.Fragment>
   );
 };
