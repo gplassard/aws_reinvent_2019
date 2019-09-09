@@ -3,12 +3,11 @@ import React from 'react';
 interface Props {
     index: number
     active: number
-    children?: React.ReactElement
 }
 
-const TabPanel: React.FC<Props> = (props: Props) => {
+const TabPanel: React.FC<React.PropsWithChildren<Props>> = (props) => {
     return (
-        props.index === props.active ? <React.Fragment/> : props.children || <React.Fragment/>
+        <React.Fragment>{props.index === props.active ? props.children : null} </React.Fragment>
     )
 }
 

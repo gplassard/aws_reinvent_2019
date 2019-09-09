@@ -5,6 +5,10 @@ import { Table, TableHead, TableRow, TableCell, TableBody } from "@material-ui/c
 
 interface Props {
     sessions: Session[]
+    favorites:  {[id: string]: boolean}
+    deleted: {[id: string]: boolean}
+    onFavorite: (id: string, isFavorite: boolean) => any
+    onDelete: (id: string, isDelete: boolean) => any
 }
 
 const Sessions: React.FC<Props> = (props: Props) => {
@@ -22,7 +26,8 @@ const Sessions: React.FC<Props> = (props: Props) => {
           </TableHead>
           <TableBody>
               {props.sessions.map(session => 
-                    <SessionComp key={session.id} session={session}></SessionComp>
+                    <SessionComp key={session.id} session={session} favorite={!!props.favorites[session.id]} deleted={!!props.deleted[session.id]}
+                        onDelete={props.onDelete} onFavorite={props.onFavorite} ></SessionComp>
                 )}
           </TableBody>
 

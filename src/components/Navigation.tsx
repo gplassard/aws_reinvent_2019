@@ -2,7 +2,7 @@ import React from 'react';
 import {AppBar, Toolbar, Typography, Menu, MenuItem} from "@material-ui/core";
 import { AccountCircle } from '@material-ui/icons';
 import './Navigation.css';
-import { auth, googleProvider } from '../services/FirebaseService';
+import { auth } from '../services/FirebaseService';
 import {User} from "firebase";
 import Login from './dialogs/Login';
 
@@ -24,17 +24,6 @@ const Navigation: React.FC<Props> = (props: Props) => {
     
     async function login() {
         setLoginOpen(true);
-        //await auth.signInAnonymously();
-        handleClose();
-    }
-
-    async function loginGoogle() {
-        await auth.signInWithPopup(googleProvider);
-        handleClose();
-    }
-
-    async function loginEmail() {
-        await auth.signInWithPopup(googleProvider);
         handleClose();
     }
 
@@ -44,9 +33,7 @@ const Navigation: React.FC<Props> = (props: Props) => {
     }
 
     const notLoggedIn = [
-        <MenuItem onClick={login} key="login">Anonymous login</MenuItem>,
-        <MenuItem onClick={loginEmail} key="loginEmail">Email login</MenuItem>,
-        <MenuItem onClick={loginGoogle} key="loginGoogle">Login with Google</MenuItem>
+        <MenuItem onClick={login} key="login">Login</MenuItem>,
     ]
 
     const loggedIn = [
