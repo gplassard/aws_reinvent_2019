@@ -3,4 +3,11 @@
     display: flex;
     justify-content: space-between
 }
-  
+
+.login-dialog {
+    .login-form {
+        min-height: 250px;
+        display: flex;
+        justify-content: space-around;
+    }
+}
