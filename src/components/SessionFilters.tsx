@@ -1,5 +1,5 @@
-import { Session, Filters, DEFAULT_FILTERS } from "../model";
-import React, { useState } from 'react';
+import { Session, Filters } from "../model";
+import React from 'react';
 import { Chip, TextField, FormControlLabel, Switch } from "@material-ui/core";
 import _ from "lodash";
 import Select from 'react-select';

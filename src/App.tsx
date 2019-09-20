@@ -60,6 +60,18 @@ const App: React.FC<Props> = (props: Props) => {
     })
   }, []);
 
+  React.useEffect(() => {
+    if (loggedUser == null) {
+      const favorites = localStorage.getItem("favorites");
+      const deleted = localStorage.getItem("deleted");
+      setState(s => ({
+        ...s, 
+        deleted: deleted ? JSON.parse(deleted) : {},
+        favorites: favorites ? JSON.parse(favorites) : {}
+      }))
+    }
+  }, [loggedUser]);
+
   const updateFiltered = () => {
     const filteredSessions = props.sessions.filter(session => filterSession(session, state, filters));
     setState({...state, filteredSessions});
@@ -80,12 +92,18 @@ const App: React.FC<Props> = (props: Props) => {
   const onDelete = (id: string, isDelete: boolean) => {
     state.deleted[id] = isDelete;
     setState({...state});
+    if (loggedUser == null) {
+      localStorage.setItem("deleted", JSON.stringify(state.deleted));
+    }
     updateFiltered();
   }
 
   const onFavorite = (id: string, isFavorite: boolean) => {
     state.favorites[id] = isFavorite;
     setState({...state});
+    if (loggedUser == null) {
+      localStorage.setItem("favorites", JSON.stringify(state.favorites));
+    }
     updateFiltered();
   }
 
