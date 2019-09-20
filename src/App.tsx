@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Session, Filters } from './model';
+import { Session, Filters, DEFAULT_FILTERS } from './model';
 import Sessions from './components/Sessions';
 import SessionFilters from './components/SessionFilters';
 import Navigation from './components/Navigation';
@@ -32,10 +32,13 @@ const filterSession = (session: Session, state: State, filters: Filters) => {
   if (filters.title && filters.title.length && !session.title.toLowerCase().includes(filters.title)) {
     return false;
   }
-  if (filters.favorites && state.favorites[session.id]) {
+  if (filters.favorites && !state.favorites[session.id]) {
     return false;
   }
   if (!filters.deletes && state.deleted[session.id]) {
+    return false;
+  }
+  if (filters.deletes && !state.deleted[session.id]) {
     return false;
   }
   return true;
@@ -49,6 +52,7 @@ const App: React.FC<Props> = (props: Props) => {
   } as State);
 
   const [loggedUser, setLoggedUser]= React.useState(auth.currentUser);
+  const [filters, setFilters] = useState(DEFAULT_FILTERS);
 
   React.useEffect(() => {
     return auth.onAuthStateChanged((user) => {
@@ -56,9 +60,13 @@ const App: React.FC<Props> = (props: Props) => {
     })
   }, []);
 
-  const onFiltersChange = async (filters: Filters) => {
+  const updateFiltered = () => {
     const filteredSessions = props.sessions.filter(session => filterSession(session, state, filters));
     setState({...state, filteredSessions});
+  }
+
+  const onFiltersChange = async (filters: Filters) => {
+    setFilters(filters);
     if (loggedUser) {
       console.log("logged in");
     }
@@ -66,16 +74,19 @@ const App: React.FC<Props> = (props: Props) => {
       console.log("not logged in")
     }
     console.table("new filters", filters)
+    updateFiltered();
   };
 
   const onDelete = (id: string, isDelete: boolean) => {
     state.deleted[id] = isDelete;
     setState({...state});
+    updateFiltered();
   }
 
   const onFavorite = (id: string, isFavorite: boolean) => {
     state.favorites[id] = isFavorite;
     setState({...state});
+    updateFiltered();
   }
 
   return (

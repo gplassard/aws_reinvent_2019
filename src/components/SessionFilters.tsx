@@ -28,6 +28,12 @@ const SessionFilters: React.FC<Props> = (props: Props) => {
       props.onFiltersChange(filters)
     }
 
+    const onSwitch = (field: 'favorites' | 'deletes') => (event: React.ChangeEvent<{}>, checked: boolean) => {
+      filters[field] = checked;
+      setFilters(filters);
+      props.onFiltersChange(filters)
+    }
+
     return (
       <div className="SessionFilters">
         <Select
@@ -64,10 +70,12 @@ const SessionFilters: React.FC<Props> = (props: Props) => {
          <FormControlLabel
             className="switchField"
             control= {<Switch/>} 
+            onChange={onSwitch('favorites')}
             label="Favorites"/>
         <FormControlLabel
             className="switchField"
             control= {<Switch/>} 
+            onChange={onSwitch('deletes')}
             label="Deleted"/>
           <Chip label={ props.sessionsCount + ' sessions'} color="primary"/>
         </div> 
