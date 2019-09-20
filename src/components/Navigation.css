@@ -1,3 +1,13 @@
-.title {
+.title p {
+    font-weight: bold;
+}
+
+.last-link {
     flex-grow: 1;
+    margin-left: 10px;
+}
+
+a {
+    all: unset;
+    cursor: pointer;
 }

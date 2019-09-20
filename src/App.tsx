@@ -4,6 +4,7 @@ import { Session, Filters, DEFAULT_FILTERS, Deleted, Favorites } from './model';
 import Sessions from './components/Sessions';
 import SessionFilters from './components/SessionFilters';
 import Navigation from './components/Navigation';
+import { Redirect, Route, BrowserRouter as Router } from 'react-router-dom';
 import { User } from 'firebase';
 
 interface Props {
@@ -43,7 +44,6 @@ const filterSession = (session: Session, favorites: Favorites, deleted: Deleted,
   return true;
 };
 
-
 const App: React.FC<Props> = (props) => {
   const [filters, setFilters] = useState(DEFAULT_FILTERS);
   
@@ -53,13 +53,27 @@ const App: React.FC<Props> = (props) => {
 
   const filteredSessions = props.sessions.filter(session => filterSession(session, props.favorites, props.deleted, filters));
 
+  function Index() {
+    return <Redirect to={{pathname: '/listing'}} />
+  }
+
+  function Listing() {
+    return (<Sessions sessions={filteredSessions} favorites={props.favorites} deleted={props.deleted}
+        onDelete={props.onDelete} onFavorite={props.onFavorite}></Sessions>)
+  }
+
+  function Agenda() {
+    return <h2>Agenda</h2>
+  }
+
   return (
-    <React.Fragment>
+    <Router>
       <Navigation loggedUser={props.loggedUser}></Navigation>
       <SessionFilters sessions={props.sessions} filters={filters} onFiltersChange={onFiltersChange} sessionsCount={filteredSessions.length}></SessionFilters>
-      <Sessions sessions={filteredSessions} favorites={props.favorites} deleted={props.deleted} 
-        onDelete={props.onDelete} onFavorite={props.onFavorite}></Sessions>
-    </React.Fragment>
+      <Route path="/" exact component={Index} />
+      <Route path="/listing" component={Listing} />
+      <Route path="/agenda" component={Agenda} />
+    </Router>
   );
 };
 
