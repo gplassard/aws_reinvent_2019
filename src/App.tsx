@@ -92,7 +92,7 @@ const App: React.FC<Props> = (props: Props) => {
   return (
     <React.Fragment>
       <Navigation loggedUser={loggedUser}></Navigation>
-      <SessionFilters sessions={props.sessions} onFiltersChange={onFiltersChange} sessionsCount={state.filteredSessions.length}></SessionFilters>
+      <SessionFilters sessions={props.sessions} filters={filters} onFiltersChange={onFiltersChange} sessionsCount={state.filteredSessions.length}></SessionFilters>
       <Sessions sessions={state.filteredSessions} favorites={state.favorites} deleted={state.deleted} 
         onDelete={onDelete} onFavorite={onFavorite}></Sessions>
     </React.Fragment>

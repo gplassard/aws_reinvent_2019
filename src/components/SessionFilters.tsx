@@ -10,28 +10,25 @@ interface Props {
     sessions: Session[]
     sessionsCount: number
     onFiltersChange: (f:Filters) => any
+    filters: Filters
 }
 
 const SessionFilters: React.FC<Props> = (props: Props) => {
     const sessions = props.sessions;
-    const [filters, setFilters] = useState(DEFAULT_FILTERS);
 
     const onFieldSelected = (field: 'days' | 'levels' | 'types' | 'hotels') => (value: ValueType<{label: string, value: string}>) => {
-      filters[field] = Array.isArray(value) ? value.map(v => v.label) : [];
-      setFilters(filters);
-      props.onFiltersChange(filters);
+      props.filters[field] = Array.isArray(value) ? value.map(v => v.label) : [];
+      props.onFiltersChange(props.filters);
     };
 
     const onFilterTitleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-      filters.title =  event.target.value.toLowerCase()
-      setFilters(filters);
-      props.onFiltersChange(filters)
+      props.filters.title =  event.target.value.toLowerCase()
+      props.onFiltersChange(props.filters)
     }
 
     const onSwitch = (field: 'favorites' | 'deletes') => (event: React.ChangeEvent<{}>, checked: boolean) => {
-      filters[field] = checked;
-      setFilters(filters);
-      props.onFiltersChange(filters)
+      props.filters[field] = checked;
+      props.onFiltersChange(props.filters)
     }
 
     return (
