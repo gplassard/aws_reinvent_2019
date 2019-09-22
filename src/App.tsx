@@ -1,22 +1,16 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Session, Filters, DEFAULT_FILTERS } from './model';
+import { Session, Filters, DEFAULT_FILTERS, Deleted, Favorites } from './model';
 import Sessions from './components/Sessions';
 import SessionFilters from './components/SessionFilters';
 import Navigation from './components/Navigation';
-import {auth} from "./services/FirebaseService";
+import {auth, firestore} from "./services/FirebaseService";
 
 interface Props {
   sessions: Session[]
 }
 
-interface State {
-  favorites:  {[id: string]: boolean}
-  deleted: {[id: string]: boolean}
-  filteredSessions: Session[]
-}
-
-const filterSession = (session: Session, state: State, filters: Filters) => {
+const filterSession = (session: Session, favorites: Favorites, deleted: Deleted, filters: Filters) => {
   if (filters.days && filters.days.length && filters.days.indexOf(session.day) < 0) {
     return false;
   }
@@ -32,25 +26,22 @@ const filterSession = (session: Session, state: State, filters: Filters) => {
   if (filters.title && filters.title.length && !session.title.toLowerCase().includes(filters.title)) {
     return false;
   }
-  if (filters.favorites && !state.favorites[session.id]) {
+  if (filters.favorites && !favorites[session.id]) {
     return false;
   }
-  if (!filters.deletes && state.deleted[session.id]) {
+  if (!filters.deletes && deleted[session.id]) {
     return false;
   }
-  if (filters.deletes && !state.deleted[session.id]) {
+  if (filters.deletes && !deleted[session.id]) {
     return false;
   }
   return true;
 };
 
 const App: React.FC<Props> = (props: Props) => {
-  const [state, setState] = useState({
-    filteredSessions: props.sessions, 
-    deleted: {},
-    favorites: {}
-  } as State);
-
+  const [filteredSessions, setFilteredSessions] = useState(props.sessions);
+  const [deleted, setDeleted] = useState({} as Deleted);
+  const [favorites, setFavorites] = useState({} as Favorites);
   const [loggedUser, setLoggedUser]= React.useState(auth.currentUser);
   const [filters, setFilters] = useState(DEFAULT_FILTERS);
 
@@ -61,48 +52,76 @@ const App: React.FC<Props> = (props: Props) => {
   }, []);
 
   React.useEffect(() => {
-    if (loggedUser == null) {
-      const favorites = localStorage.getItem("favorites");
+    if (loggedUser && loggedUser.uid) {
+      return firestore.collection('deleted').doc(loggedUser.uid).onSnapshot((snapshot) =>{
+        console.log("new deleted", snapshot.data())
+        setDeleted(snapshot.data() || {});
+        updateFiltered();
+      });
+    }
+    else {
       const deleted = localStorage.getItem("deleted");
-      setState(s => ({
-        ...s, 
-        deleted: deleted ? JSON.parse(deleted) : {},
-        favorites: favorites ? JSON.parse(favorites) : {}
-      }))
+      setDeleted(deleted ? JSON.parse(deleted) : {});
+      updateFiltered();
+    }
+  }, [loggedUser]);
+
+  React.useEffect(() => {
+    if (loggedUser && loggedUser.uid) {
+      return firestore.collection('favorites').doc(loggedUser.uid).onSnapshot((snapshot) =>{
+        console.log("new favorites", snapshot.data())
+        setFavorites(snapshot.data() || {});
+        updateFiltered();
+      });
+    }
+    else {
+      const favorites = localStorage.getItem("favorites");
+      setFavorites(favorites ? JSON.parse(favorites) : {});
+      updateFiltered();
     }
   }, [loggedUser]);
 
   const updateFiltered = () => {
-    const filteredSessions = props.sessions.filter(session => filterSession(session, state, filters));
-    setState({...state, filteredSessions});
+    console.table("filter", loggedUser && loggedUser.uid, favorites, deleted)
+    const filteredSessions = props.sessions.filter(session => filterSession(session, favorites, deleted, filters));
+    setFilteredSessions(filteredSessions);
   }
 
   const onFiltersChange = async (filters: Filters) => {
     setFilters(filters);
-    if (loggedUser) {
-      console.log("logged in");
-    }
-    else {
-      console.log("not logged in")
-    }
-    console.table("new filters", filters)
     updateFiltered();
   };
 
-  const onDelete = (id: string, isDelete: boolean) => {
-    state.deleted[id] = isDelete;
-    setState({...state});
-    if (loggedUser == null) {
-      localStorage.setItem("deleted", JSON.stringify(state.deleted));
+  const onDelete = async (id: string, isDelete: boolean) => {
+    if (isDelete) {
+      deleted[id] = isDelete;  
+    }
+    else {
+      delete deleted[id];
+    }
+    setDeleted({...deleted});
+    if (loggedUser && loggedUser.uid) {
+      await firestore.collection('deleted').doc(loggedUser.uid).set(deleted);
+    }
+    else {
+      localStorage.setItem("deleted", JSON.stringify(deleted));
     }
     updateFiltered();
   }
 
-  const onFavorite = (id: string, isFavorite: boolean) => {
-    state.favorites[id] = isFavorite;
-    setState({...state});
-    if (loggedUser == null) {
-      localStorage.setItem("favorites", JSON.stringify(state.favorites));
+  const onFavorite = async (id: string, isFavorite: boolean) => {
+    if (isFavorite) {
+      favorites[id] = isFavorite;  
+    }
+    else {
+      delete favorites[id];
+    }
+    setFavorites({...favorites});
+    if (loggedUser && loggedUser.uid) {
+      await firestore.collection('favorites').doc(loggedUser.uid).set(favorites);
+    }
+    else {
+      localStorage.setItem("favorites", JSON.stringify(favorites));
     }
     updateFiltered();
   }
@@ -110,8 +129,8 @@ const App: React.FC<Props> = (props: Props) => {
   return (
     <React.Fragment>
       <Navigation loggedUser={loggedUser}></Navigation>
-      <SessionFilters sessions={props.sessions} filters={filters} onFiltersChange={onFiltersChange} sessionsCount={state.filteredSessions.length}></SessionFilters>
-      <Sessions sessions={state.filteredSessions} favorites={state.favorites} deleted={state.deleted} 
+      <SessionFilters sessions={props.sessions} filters={filters} onFiltersChange={onFiltersChange} sessionsCount={filteredSessions.length}></SessionFilters>
+      <Sessions sessions={filteredSessions} favorites={favorites} deleted={deleted} 
         onDelete={onDelete} onFavorite={onFavorite}></Sessions>
     </React.Fragment>
   );
