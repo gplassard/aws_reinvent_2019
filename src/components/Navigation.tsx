@@ -2,7 +2,7 @@ import React from 'react';
 import {AppBar, Toolbar, Typography, Menu, MenuItem} from "@material-ui/core";
 import { AccountCircle } from '@material-ui/icons';
 import { Link } from 'react-router-dom';
-import './Navigation.css';
+import './Navigation.scss';
 import { auth } from '../services/FirebaseService';
 import {User} from "firebase";
 import Login from './dialogs/Login';
@@ -47,7 +47,7 @@ const Navigation: React.FC<Props> = (props: Props) => {
 
     return (
         <React.Fragment>
-            <AppBar position="static">
+            <AppBar position="static" className="navigation">
                 <Toolbar>
                     <Link to="/" className="title">
                         <Typography>REINVENT-2019-PLANNER</Typography>

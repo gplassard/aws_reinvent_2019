@@ -1,0 +1,15 @@
+.navigation {
+    .title p {
+        font-weight: bold;
+    }
+    
+    .last-link {
+        flex-grow: 1;
+        margin-left: 20px;
+    }
+    
+    a {
+        all: unset;
+        cursor: pointer;
+    }
+}
