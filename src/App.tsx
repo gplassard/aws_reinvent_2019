@@ -5,7 +5,9 @@ import Sessions from './components/Sessions';
 import SessionFilters from './components/SessionFilters';
 import Navigation from './components/Navigation';
 import { Redirect, Route, BrowserRouter as Router } from 'react-router-dom';
+import _ from "lodash";
 import { User } from 'firebase';
+import Agenda from './components/Agenda';
 
 interface Props {
   sessions: Session[]
@@ -53,26 +55,28 @@ const App: React.FC<Props> = (props) => {
 
   const filteredSessions = props.sessions.filter(session => filterSession(session, props.favorites, props.deleted, filters));
 
-  function Index() {
+  function IndexRender() {
     return <Redirect to={{pathname: '/listing'}} />
   }
 
-  function Listing() {
-    return (<Sessions sessions={filteredSessions} favorites={props.favorites} deleted={props.deleted}
-        onDelete={props.onDelete} onFavorite={props.onFavorite}></Sessions>)
+  function ListingRender() {
+    return <Sessions sessions={filteredSessions} favorites={props.favorites} deleted={props.deleted}
+        onDelete={props.onDelete} onFavorite={props.onFavorite}></Sessions>
   }
 
-  function Agenda() {
-    return <h2>Agenda</h2>
+  function AgendaRender() {
+    const hotels = _.uniq(props.sessions.map(s => s.hotel));
+    const sessions = filteredSessions.slice(0,10);
+    return <Agenda sessions={sessions} hotels={hotels}></Agenda>
   }
 
   return (
     <Router>
       <Navigation loggedUser={props.loggedUser}></Navigation>
       <SessionFilters sessions={props.sessions} filters={filters} onFiltersChange={onFiltersChange} sessionsCount={filteredSessions.length}></SessionFilters>
-      <Route path="/" exact component={Index} />
-      <Route path="/listing" component={Listing} />
-      <Route path="/agenda" component={Agenda} />
+      <Route path="/" exact component={IndexRender} />
+      <Route path="/listing" component={ListingRender} />
+      <Route path="/agenda" component={AgendaRender} />
     </Router>
   );
 };
