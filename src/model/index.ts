@@ -32,3 +32,6 @@ export const DEFAULT_FILTERS: Filters =  {
     deletes: false,
     description: null
 }
+
+export type Favorites = {[id: string]: boolean};
+export type Deleted = {[id: string]: boolean}; 

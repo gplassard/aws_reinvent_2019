@@ -3,7 +3,7 @@ node_js:
   - lts/*
 
 script:
-- yarn test
+- yarn test --passWithNoTests
 - yarn build
 
 deploy:
