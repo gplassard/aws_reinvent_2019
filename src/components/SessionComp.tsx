@@ -1,7 +1,8 @@
 import { Session } from "../model";
 import React from 'react';
 import { TableRow, TableCell, Chip } from "@material-ui/core";
-import {Star, Delete, StarBorder, DeleteOutline} from "@material-ui/icons";
+import SessionTitle from "./SessionTitle";
+import SessionActions from "./SessionActions";
 
 interface Props {
     session: Session
@@ -16,12 +17,8 @@ const SessionComp: React.FC<Props> = (props: Props) => {
     return (
       <TableRow> 
         <TableCell>
-          {props.favorite ? 
-            <Star onClick={() => props.onFavorite(session.id, !props.favorite)} className="clickable"/> : 
-            <StarBorder onClick={() => props.onFavorite(session.id, !props.favorite)} className="clickable"/> }
-          {props.deleted ? 
-            <Delete onClick={() => props.onDelete(session.id, !props.deleted)} className="clickable"/> : 
-            <DeleteOutline onClick={() => props.onDelete(session.id, !props.deleted)} className="clickable"/> }
+          <SessionActions session={session} favorite={props.favorite} deleted={props.deleted}
+              onFavorite={props.onFavorite} onDelete={props.onDelete}></SessionActions>
         </TableCell>
         <TableCell>{session.times || session.day}</TableCell>
         <TableCell>{session.hotel}</TableCell>
@@ -30,11 +27,7 @@ const SessionComp: React.FC<Props> = (props: Props) => {
           <Chip label={ session.level} className={session.level}/>
         </TableCell>
         <TableCell>
-            <a href={`https://www.portal.reinvent.awsevents.com/connect/search.ww?trk=typed_bookmarked#loadSearch-searchPhrase="${session.abbr}"&searchType=session`}>
-                {session.abbr}
-            </a>
-            {' '}
-            {session.title}
+          <SessionTitle session={session}></SessionTitle>
         </TableCell>
         <TableCell>{session.abstract}</TableCell>
       </TableRow>

@@ -4,7 +4,10 @@ import { Session, Filters, DEFAULT_FILTERS, Deleted, Favorites } from './model';
 import Sessions from './components/Sessions';
 import SessionFilters from './components/SessionFilters';
 import Navigation from './components/Navigation';
+import { Redirect, Route, BrowserRouter as Router } from 'react-router-dom';
+import _ from "lodash";
 import { User } from 'firebase';
+import Agenda from './components/Agenda';
 
 interface Props {
   sessions: Session[]
@@ -43,7 +46,6 @@ const filterSession = (session: Session, favorites: Favorites, deleted: Deleted,
   return true;
 };
 
-
 const App: React.FC<Props> = (props) => {
   const [filters, setFilters] = useState(DEFAULT_FILTERS);
   
@@ -53,13 +55,29 @@ const App: React.FC<Props> = (props) => {
 
   const filteredSessions = props.sessions.filter(session => filterSession(session, props.favorites, props.deleted, filters));
 
+  function IndexRender() {
+    return <Redirect to={{pathname: '/listing'}} />
+  }
+
+  function ListingRender() {
+    return <Sessions sessions={filteredSessions} favorites={props.favorites} deleted={props.deleted}
+        onDelete={props.onDelete} onFavorite={props.onFavorite}></Sessions>
+  }
+
+  function AgendaRender() {
+    const hotels = _.uniq(props.sessions.map(s => s.hotel));
+    return <Agenda sessions={filteredSessions} hotels={hotels} favorites={props.favorites} deleted={props.deleted}
+    onDelete={props.onDelete} onFavorite={props.onFavorite}></Agenda>
+  }
+
   return (
-    <React.Fragment>
+    <Router>
       <Navigation loggedUser={props.loggedUser}></Navigation>
       <SessionFilters sessions={props.sessions} filters={filters} onFiltersChange={onFiltersChange} sessionsCount={filteredSessions.length}></SessionFilters>
-      <Sessions sessions={filteredSessions} favorites={props.favorites} deleted={props.deleted} 
-        onDelete={props.onDelete} onFavorite={props.onFavorite}></Sessions>
-    </React.Fragment>
+      <Route path="/" exact component={IndexRender} />
+      <Route path="/listing" component={ListingRender} />
+      <Route path="/agenda" component={AgendaRender} />
+    </Router>
   );
 };
 

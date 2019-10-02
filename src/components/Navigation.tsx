@@ -1,7 +1,8 @@
 import React from 'react';
 import {AppBar, Toolbar, Typography, Menu, MenuItem} from "@material-ui/core";
 import { AccountCircle } from '@material-ui/icons';
-import './Navigation.css';
+import { Link } from 'react-router-dom';
+import './Navigation.scss';
 import { auth } from '../services/FirebaseService';
 import {User} from "firebase";
 import Login from './dialogs/Login';
@@ -46,9 +47,14 @@ const Navigation: React.FC<Props> = (props: Props) => {
 
     return (
         <React.Fragment>
-            <AppBar position="static">
+            <AppBar position="static" className="navigation">
                 <Toolbar>
-                    <Typography className="title">AWS-REINVENT-2019</Typography>
+                    <Link to="/" className="title">
+                        <Typography>REINVENT-2019-PLANNER</Typography>
+                    </Link>
+                    <Link to="/agenda" className="last-link">
+                        <Typography>Agenda</Typography>
+                    </Link>
                     {props.loggedUser ? <Typography >{props.loggedUser.displayName || props.loggedUser.uid}</Typography> : null}
                     <AccountCircle onClick={handleClick}></AccountCircle>
                     <Menu id="simple-menu"
