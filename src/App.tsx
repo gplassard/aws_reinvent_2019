@@ -9,6 +9,7 @@ import _ from "lodash";
 import { User } from 'firebase';
 import Agenda from './components/Agenda';
 
+
 interface Props {
   sessions: Session[]
   loggedUser: User | null
@@ -71,7 +72,7 @@ const App: React.FC<Props> = (props) => {
   }
 
   return (
-    <Router>
+    <Router basename="aws_reinvent_2019">
       <Navigation loggedUser={props.loggedUser}></Navigation>
       <SessionFilters sessions={props.sessions} filters={filters} onFiltersChange={onFiltersChange} sessionsCount={filteredSessions.length}></SessionFilters>
       <Route path="/" exact component={IndexRender} />
