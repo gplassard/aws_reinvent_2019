@@ -19,6 +19,23 @@
   color: white;
 }
 
+.MuiChip-root  {
+
+  &.level-Intermediate{
+    background-color: green;
+    color: white;
+  }
+  
+  &.level-Advanced {
+    background-color: orange;
+  }
+  
+  &.level-Expert {
+    background-color: red;
+  }
+}
+
+
 .App-link {
   color: #61dafb;
 }
@@ -30,4 +47,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.flex-break {
+  flex-basis: 100%;
+  height: 0;
 }

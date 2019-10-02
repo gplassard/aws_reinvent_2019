@@ -1,0 +1,16 @@
+.SessionFilters {
+  display: flex;
+  align-items: flex-end;
+  margin-top: -15px;
+  min-width: 100%;
+  justify-content: space-between;
+
+  .multi-select {
+    min-width: 250px;
+  }
+
+  .textField {
+    margin-bottom: 0;
+    min-width: 150px;
+  }
+}

@@ -26,7 +26,7 @@ const SessionDialog: React.FC<Props> = (props: Props) => {
                 <DialogTitle>
                     <SessionTitle session={session}></SessionTitle>
                     <Chip label={ session.type} color="primary"/>
-                    <Chip label={ session.level} className={session.level}/>
+                    <Chip label={ session.level} className={"level-" + session.level}/>
                     <SessionActions session={session} favorite={props.favorite} deleted={props.deleted} onFavorite={props.onFavorite} 
                             onDelete={props.onDelete}></SessionActions>
                 </DialogTitle>

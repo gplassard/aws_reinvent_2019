@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App.css';
+import './App.scss';
 import { Session, Filters, DEFAULT_FILTERS, Deleted, Favorites } from './model';
 import Sessions from './components/Sessions';
 import SessionFilters from './components/SessionFilters';
@@ -30,6 +30,9 @@ const filterSession = (session: Session, favorites: Favorites, deleted: Deleted,
     return false;
   }
   if (filters.levels && filters.levels.length && filters.levels.indexOf(session.level) < 0) {
+    return false;
+  }
+  if (filters.tracks && filters.tracks.length && filters.tracks.indexOf(session.track) < 0) {
     return false;
   }
   if (filters.title && filters.title.length && !session.title.toLowerCase().includes(filters.title)) {

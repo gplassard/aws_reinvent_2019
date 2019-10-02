@@ -4,7 +4,7 @@ import { Chip, TextField, FormControlLabel, Switch } from "@material-ui/core";
 import _ from "lodash";
 import Select from 'react-select';
 import { ValueType } from "react-select/src/types";
-import './SessionFilters.css';
+import './SessionFilters.scss';
 
 interface Props {
     sessions: Session[]
@@ -16,7 +16,7 @@ interface Props {
 const SessionFilters: React.FC<Props> = (props: Props) => {
     const sessions = props.sessions;
 
-    const onFieldSelected = (field: 'days' | 'levels' | 'types' | 'hotels') => (value: ValueType<{label: string, value: string}>) => {
+    const onFieldSelected = (field: 'days' | 'levels' | 'types' | 'hotels' | 'tracks') => (value: ValueType<{label: string, value: string}>) => {
       props.filters[field] = Array.isArray(value) ? value.map(v => v.label) : [];
       props.onFiltersChange(props.filters);
     };
@@ -34,28 +34,39 @@ const SessionFilters: React.FC<Props> = (props: Props) => {
     return (
       <div className="SessionFilters">
         <Select
+            className="multi-select"
             placeholder="Choose a day"
             isMulti={true}
             onChange={onFieldSelected('days')}
             options={_.uniq(sessions.map(s => s.day)).map(s => ({label: s, value: s})) }
           />
           <Select
+            className="multi-select"
             placeholder="Choose a hotel"
             isMulti={true}
             onChange={onFieldSelected('hotels')}
             options={_.uniq(sessions.map(s => s.hotel)).map(s => ({label: s, value: s})) }
           />
           <Select
+            className="multi-select"
             placeholder="Choose a session type"
             isMulti={true}
             onChange={onFieldSelected('types')}
             options={_.uniq(sessions.map(s => s.type)).map(s => ({label: s, value: s})) }
           />
         <Select
+            className="multi-select"
             placeholder="Choose a session level"
             isMulti={true}
             onChange={onFieldSelected('levels')}
             options={_.uniq(sessions.map(s => s.level)).map(s => ({label: s, value: s})) }
+          />
+        <Select
+            className="multi-select"
+            placeholder="Choose a track"
+            isMulti={true}
+            onChange={onFieldSelected('tracks')}
+            options={_.uniq(sessions.map(s => s.track)).map(s => ({label: s, value: s})) }
           />
         <TextField
           className="textField"
