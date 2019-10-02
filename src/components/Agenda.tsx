@@ -1,10 +1,11 @@
 
-import * as React from 'react';
+import  React, {Fragment} from 'react';
 import 'react-big-scheduler/lib/css/style.css'
 import { DragDropContext } from 'react-dnd';
 import HTML5Backend from 'react-dnd-html5-backend';
 import _ from 'lodash'
 import { Session } from '../model';
+import SessionDialog from './dialogs/SessionDialog';
 // tslint:disable-next-line: no-var-requires
 const Scheduler = require('react-big-scheduler').default;
 // tslint:disable-next-line: no-var-requires
@@ -13,6 +14,10 @@ const {SchedulerData, ViewTypes} = require('react-big-scheduler');
 interface Props {
     sessions: Session[]
     hotels: string[]
+    favorites:  {[id: string]: boolean}
+    deleted: {[id: string]: boolean}
+    onFavorite: (id: string, isFavorite: boolean) => any
+    onDelete: (id: string, isDelete: boolean) => any
 }
 
 const Agenda: React.FC<Props> = (props: Props) => {
@@ -25,6 +30,7 @@ const Agenda: React.FC<Props> = (props: Props) => {
     DEFAULT_SCHEDULER_DATA.localeMoment.locale('fr');
 
     const [{data}, setSchedulerData] = React.useState({data: DEFAULT_SCHEDULER_DATA});
+    const [dialogSession, setDialogSession] = React.useState<Session | null>(null);
 
     const resources = props.hotels.map(h => ({id: h, name: h}));
     data.setResources(resources);
@@ -34,7 +40,8 @@ const Agenda: React.FC<Props> = (props: Props) => {
         end: `2019-09-20T${11 + index}:53:18.637Z`,
         resourceId: s.hotel,
         title: s.abbr + " " + s.title,
-        id: s.id
+        id: s.id,
+        data: s
     })), event => event.start);
     data.setEvents(events);
 
@@ -58,12 +65,25 @@ const Agenda: React.FC<Props> = (props: Props) => {
         schedulerData.setEvents(events);
         setSchedulerData({data: schedulerData});
     };
+
+    const eventClicked = (schedulerData: any, event: any) => {
+        setDialogSession(event.data);
+    };
    
-    return <Scheduler schedulerData={data}
+    return (<Fragment>
+        <Scheduler schedulerData={data}
             nextClick={next}
             prevClick={previous}
             onSelectDate={selectDate}
-            onViewChange={changeView}/>;
+            eventItemClick={eventClicked}
+            onViewChange={changeView}/>
+        <SessionDialog session={dialogSession} 
+            onClose={() => setDialogSession(null)} 
+            favorite={dialogSession != null && !!props.favorites[dialogSession.id]}
+            deleted={dialogSession != null && !!props.deleted[dialogSession.id]}
+            onDelete={props.onDelete} 
+            onFavorite={props.onFavorite}></SessionDialog>
+    </Fragment>);
   };
 
   export default DragDropContext(HTML5Backend)(Agenda); 
