@@ -4,7 +4,7 @@ import { Session, Filters, DEFAULT_FILTERS, Deleted, Favorites } from './model';
 import Sessions from './components/Sessions';
 import SessionFilters from './components/SessionFilters';
 import Navigation from './components/Navigation';
-import { Redirect, Route, BrowserRouter as Router } from 'react-router-dom';
+import { Redirect, Route, HashRouter } from 'react-router-dom';
 import _ from "lodash";
 import { User } from 'firebase';
 import Agenda from './components/Agenda';
@@ -72,13 +72,13 @@ const App: React.FC<Props> = (props) => {
   }
 
   return (
-    <Router basename="aws_reinvent_2019">
+    <HashRouter>
       <Navigation loggedUser={props.loggedUser}></Navigation>
       <SessionFilters sessions={props.sessions} filters={filters} onFiltersChange={onFiltersChange} sessionsCount={filteredSessions.length}></SessionFilters>
       <Route path="/" exact component={IndexRender} />
       <Route path="/listing" component={ListingRender} />
       <Route path="/agenda" component={AgendaRender} />
-    </Router>
+    </HashRouter>
   );
 };
 
