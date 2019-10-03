@@ -70,7 +70,10 @@ const App: React.FC<Props> = (props) => {
 
   function AgendaRender() {
     const hotels = _.uniq(props.sessions.map(s => s.hotel));
-    return <Agenda sessions={filteredSessions} hotels={hotels} favorites={props.favorites} deleted={props.deleted}
+    const sublist = filteredSessions
+        .filter(s => s.start != null && s.end != null);
+        //.slice(0, 100);
+    return <Agenda sessions={sublist} hotels={hotels} favorites={props.favorites} deleted={props.deleted}
     onDelete={props.onDelete} onFavorite={props.onFavorite}></Agenda>
   }
 

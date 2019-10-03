@@ -21,7 +21,7 @@ interface Props {
 }
 
 const Agenda: React.FC<Props> = (props: Props) => {
-    const DEFAULT_SCHEDULER_DATA = new SchedulerData('2019-09-20', ViewTypes.Week, false, false, {
+    const DEFAULT_SCHEDULER_DATA = new SchedulerData('2019-12-04', ViewTypes.Week, false, false, {
         views: [
             {viewName: 'Day', viewType: ViewTypes.Day, showAgenda: false, isEventPerspective: false},
             {viewName: 'Week', viewType: ViewTypes.Week, showAgenda: false, isEventPerspective: false}
@@ -36,8 +36,8 @@ const Agenda: React.FC<Props> = (props: Props) => {
     data.setResources(resources);
 
     const events = _.sortBy(props.sessions.map((s, index) => ({
-        start: `2019-09-20T${10 + index}:53:18.637Z`,
-        end: `2019-09-20T${11 + index}:53:18.637Z`,
+        start: s.start,
+        end: s.end,
         resourceId: s.hotel,
         title: s.abbr + " " + s.title,
         id: s.id,

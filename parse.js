@@ -59,7 +59,7 @@ fs.readdirSync("sessions").forEach(fileName => {
     $('.sessionRow').each((index, elem) => {
         const id = $(elem).attr('id') //?
         const abbr = $('.abbreviation', elem).text().replace(" - ", "") //?
-        const title = $('.title', elem).text() //?
+        const title = $('.title', elem).text().replace(/\n/g, '').replace(/\t/g, '') //?
         const abstract = $('.abstract', elem).text().replace("View Less", "") //?
         const type = $('.type', elem).text() //?
         const speaker = $('.speakers', elem).text() //?
@@ -71,9 +71,11 @@ fs.readdirSync("sessions").forEach(fileName => {
         const start = moment(parseableStart, 'Z ddd MMM DD, h:m a').tz('America/Los_Angeles') //?
         const parseableEnd = '-08:00 ' + times.replace(/, \d+:\d+ ([AP]M) -/, '') //?
         const end = moment( parseableEnd, 'Z ddd MMM DD h:m a').tz('America/Los_Angeles') //?
-        //const dayFromDate = start.locale('en').format('ddd');
+        const localeStart = start.isValid() ? start.format('YYYY-MM-DDTHH:mm:ss') : null
+        const localeEnd = end.isValid() ? end.format('YYYY-MM-DDTHH:mm:ss') : null
+        const dayFromDate = start.isValid() ? start.locale('en').format('dddd') : "unknown";
 
-        sessions.push({id, abbr, title, abstract, type, track, day, hotel, level, rooms: rooms.replace(' – ', ''), times, start, end})
+        sessions.push({id, abbr, title, abstract, type, track, day: dayFromDate, hotel, level, rooms: rooms.replace(' – ', ''), times, start: localeStart, end: localeEnd})
     })
 })
 
