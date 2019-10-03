@@ -1,7 +1,7 @@
 const cheerio = require('cheerio');
 const fs = require('fs');
 const _ = require('lodash');
-const moment = require('moment');
+const moment = require('moment-timezone');
 
 let sessions = [];
 const tracksMap = {
@@ -49,7 +49,6 @@ const tracksMap = {
 'WPT': 'We Power Tech'
 };
 
-
 fs.readdirSync("sessions").forEach(fileName => {
     const [level] = fileName.split("_").map(n => n.replace(".html", "")); //?
     const [hotel, day] = ["unknown","unknown"]
@@ -65,11 +64,16 @@ fs.readdirSync("sessions").forEach(fileName => {
         const type = $('.type', elem).text() //?
         const speaker = $('.speakers', elem).text() //?
         const rooms = $('.sessionRoom', elem).text() //?
-        const times = $('.availableSessions', elem).text().replace(rooms, '').replace('Session enrollment has not yet begun.', '')//?
         const track = tracksMap[abbr.substring(0,3)];
-        const start = moment('-08:00 ' +times, 'Z ddd MMM DD, h:m a').toDate() //?
+        const times = $('.availableSessions', elem).text().replace(rooms, '').replace('Session enrollment has not yet begun.', '')//?
         
-        sessions.push({id, abbr, title, abstract, type, track, day, hotel, level, rooms: rooms.replace(' – ', ''), times, start})
+        const parseableStart = '-08:00 ' + times.replace(/-.*/, '') //?
+        const start = moment(parseableStart, 'Z ddd MMM DD, h:m a').tz('America/Los_Angeles') //?
+        const parseableEnd = '-08:00 ' + times.replace(/, \d+:\d+ ([AP]M) -/, '') //?
+        const end = moment( parseableEnd, 'Z ddd MMM DD h:m a').tz('America/Los_Angeles') //?
+        //const dayFromDate = start.locale('en').format('ddd');
+
+        sessions.push({id, abbr, title, abstract, type, track, day, hotel, level, rooms: rooms.replace(' – ', ''), times, start, end})
     })
 })
 
