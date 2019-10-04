@@ -66,24 +66,31 @@ const sleep = seconds =>
     return inputs.map(input => ({ id: input.children[0].getAttribute('id'), label: input.textContent.trim().split(' - ')[1] }))
   }), 'id')
 
+  const topics = _.uniqBy(await page.evaluate(() => {
+    const inputs = [...document.querySelectorAll('#profileItem_19577_tr .filter-item')]
+    return inputs.map(input => ({ id: input.children[0].getAttribute('id'), label: input.textContent.trim() }))
+  }), 'id')
+
   //console.log(days)
   //console.log(hotels)
   console.log(levels)
+  console.log(topics)
 
   /*
-  for (day of days) {
-    for (hotel of hotels) {*/
-      for (level of levels) {
+  for (day of days) {*/
+    for (level of levels) {
+      for (topic of topics) {
         //const dayId = day.id.replace('day_', '');
         //const hotelId = hotel.id.replace('profileItem_728_', '')
         const levelId = level.id.replace('profileItem_18667_', '')
+        const topicId = topic.id.replace('profileItem_19577_', '')
 
         await page.goto(`https://google.fr`)
         //await page.goto(`https://www.portal.reinvent.awsevents.com/connect/search.ww#loadSearch-searchPhrase=&searchType=session&tc=0&sortBy=daytime&dayID=${dayId}&p=&i(10041)=${levelId}&i(728)=${hotelId}`)
         //console.log(`https://www.portal.reinvent.awsevents.com/connect/search.ww#loadSearch-searchPhrase=&searchType=session&tc=0&sortBy=daytime&dayID=${dayId}&p=&i(10041)=${levelId}&i(728)=${hotelId}`)
         
-        await page.goto(`https://www.portal.reinvent.awsevents.com/connect/search.ww#loadSearch-searchPhrase=&searchType=session&tc=0&sortBy=daytime&p=&i(18667)=${levelId}`)
-        console.log(`https://www.portal.reinvent.awsevents.com/connect/search.ww#loadSearch-searchPhrase=&searchType=session&tc=0&sortBy=daytime&p=&i(18667)=${levelId}`)
+        await page.goto(`https://www.portal.reinvent.awsevents.com/connect/search.ww#loadSearch-searchPhrase=&searchType=session&tc=0&sortBy=daytime&p=&i(18667)=${levelId}&i(19577)=${topicId}`)
+        console.log(`https://www.portal.reinvent.awsevents.com/connect/search.ww#loadSearch-searchPhrase=&searchType=session&tc=0&sortBy=daytime&p=&i(18667)=${levelId}&i(19577)=${topicId}`)
 
         while (await elementExist('#getMoreResults')) {
           await page.click('#getMoreResults')
@@ -116,13 +123,13 @@ const sleep = seconds =>
           //fs.writeFileSync(`sessions/all.html`, html)
           //console.log(`sessions/all.html` /*, options.length*/);
 
-          fs.writeFileSync(`sessions/${level.label}.html`, html)
-          console.log(`sessions/${level.label}.html`, options.length);
+          fs.writeFileSync(`sessions/${level.label}_${topicId}.html`, html)
+          console.log(`sessions/${level.label}_${topicId}.html`, options.length);
         //}
         
       }
-    /*}
-  }*/
+    }
+  /*}*/
 
 
   await browser.close()
