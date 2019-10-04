@@ -1,3 +1,4 @@
+@import './colors.scss';
 .App {
   text-align: center;
 }
@@ -33,6 +34,183 @@
   &.level-Expert {
     background-color: red;
   }
+ 
+  &.track-ADM {
+    background-color: $ADM;
+    color: $ADM-text;
+  }
+  &.track-ENT {
+    background-color: $ENT;
+    color: $ENT-text;
+  }
+  &.track-OIG {
+    background-color: $OIG;
+    color: $OIG-text;
+  }
+  &.track-AIM {
+    background-color: $AIM;
+    color: $AIM-text;
+  }
+  &.track-EUC {
+    background-color: $EUC;
+    color: $EUC-text;
+  }
+  &.track-OPN {
+    background-color: $OPN;
+    color: $OPN-text;
+  }
+  &.track-ALX {
+    background-color: $ALX;
+    color: $ALX-text;
+  }
+  &.track-FSI {
+    background-color: $FSI;
+    color: $FSI-text;
+  }
+  &.track-PNU {
+    background-color: $PNU;
+    color: $PNU-text;
+  }
+  &.track-ANT {
+    background-color: $ANT;
+    color: $ANT-text;
+  }
+  &.track-GAM {
+    background-color: $GAM;
+    color: $GAM-text;
+  }
+  &.track-RET {
+    background-color: $RET;
+    color: $RET-text;
+  }
+  &.track-API {
+    background-color: $API;
+    color: $API-text;
+  }
+  &.track-GPS {
+    background-color: $GPS;
+    color: $GPS-text;
+  }
+  &.track-ROB {
+    background-color: $ROB;
+    color: $ROB-text;
+  }
+  &.track-ARC {
+    background-color: $ARC;
+    color: $ARC-text;
+  }
+  &.track-HLC {
+    background-color: $HLC;
+    color: $HLC-text;
+  }
+  &.track-SEC {
+    background-color: $SEC;
+    color: $SEC-text;
+  }
+  &.track-ARV {
+    background-color: $ARV;
+    color: $ARV-text;
+  }
+  &.track-IOT {
+    background-color: $IOT;
+    color: $IOT-text;
+  }
+  &.track-STG {
+    background-color: $STG;
+    color: $STG-text;
+  }
+  &.track-AUT {
+    background-color: $AUT;
+    color: $AUT-text;
+  }
+  &.track-LFS {
+    background-color: $LFS;
+    color: $LFS-text;
+  }
+  &.track-STP {
+    background-color: $STP;
+    color: $STP-text;
+  }
+  &.track-BLC {
+    background-color: $BLC;
+    color: $BLC-text;
+  }
+  &.track-MDS {
+    background-color: $MDS;
+    color: $MDS-text;
+  }
+  &.track-SVS {
+    background-color: $SVS;
+    color: $SVS-text;
+  }
+  &.track-CMP {
+    background-color: $CMP;
+    color: $CMP-text;
+  }
+  &.track-MFG {
+    background-color: $MFG;
+    color: $MFG-text;
+  }
+  &.track-TLC {
+    background-color: $TLC;
+    color: $TLC-text;
+  }
+  &.track-CMY {
+    background-color: $CMY;
+    color: $CMY-text;
+  }
+  &.track-MGT {
+    background-color: $MGT;
+    color: $MGT-text;
+  }
+  &.track-TRH {
+    background-color: $TRH;
+    color: $TRH-text;
+  }
+  &.track-CON {
+    background-color: $CON;
+    color: $CON-text;
+  }
+  &.track-MKT {
+    background-color: $MKT;
+    color: $MKT-text;
+  }
+  &.track-WIN {
+    background-color: $WIN;
+    color: $WIN-text;
+  }
+  &.track-DAT {
+    background-color: $DAT;
+    color: $DAT-text;
+  }
+  &.track-MOB {
+    background-color: $MOB;
+    color: $MOB-text;
+  }
+  &.track-WPS {
+    background-color: $WPS;
+    color: $WPS-text;
+  }
+  &.track-DOP {
+    background-color: $DOP;
+    color: $DOP-text;
+  }
+  &.track-NET {
+    background-color: $NET;
+    color: $NET-text;
+  }
+  &.track-WPT {
+    background-color: $WPT;
+    color: $WPT-text;
+  }  
+  &.track-NFX {
+    background-color: $NFX;
+    color: $NFX-text;
+  }
+  &.track-AMZ {
+    background-color: $AMZ;
+    color: $AMZ-text;
+  }  
 }
 
 

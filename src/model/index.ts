@@ -4,6 +4,7 @@ export interface Session {
     title: string;
     abstract: string;
     track: string;
+    trackId: string;
     type: string;
     day: string;
     hotel: string;

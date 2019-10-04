@@ -25,6 +25,7 @@ const SessionComp: React.FC<Props> = (props: Props) => {
         <TableCell>
           <Chip label={ session.type} color="primary"/>
           <Chip label={ session.level} className={"level-" + session.level}/>
+          <Chip label={ session.track} className={"track-" + session.trackId}/>
         </TableCell>
         <TableCell>
           <SessionTitle session={session}></SessionTitle>

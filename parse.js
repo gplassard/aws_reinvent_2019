@@ -46,7 +46,9 @@ const tracksMap = {
 'WPS': 'Public Sector',
 'DOP': 'DevOps',
 'NET': 'Networking & Content Delivery',
-'WPT': 'We Power Tech'
+'WPT': 'We Power Tech',
+'NFX': 'Netflix',
+'AMZ': 'Amazon'
 };
 
 fs.readdirSync("sessions").forEach(fileName => {
@@ -64,7 +66,8 @@ fs.readdirSync("sessions").forEach(fileName => {
         const type = $('.type', elem).text() //?
         const speaker = $('.speakers', elem).text() //?
         const rooms = $('.sessionRoom', elem).text() //?
-        const track = tracksMap[abbr.substring(0,3)];
+        const trackId = abbr.substring(0,3)
+        const track = tracksMap[trackId];
         const times = $('.availableSessions', elem).text().replace(rooms, '').replace('Session enrollment has not yet begun.', '')//?
         
         const parseableStart = '-08:00 ' + times.replace(/-.*/, '') //?
@@ -75,7 +78,7 @@ fs.readdirSync("sessions").forEach(fileName => {
         const localeEnd = end.isValid() ? end.format('YYYY-MM-DDTHH:mm:ss') : null
         const dayFromDate = start.isValid() ? start.locale('en').format('dddd') : "unknown";
 
-        sessions.push({id, abbr, title, abstract, type, track, day: dayFromDate, hotel, level, rooms: rooms.replace(' – ', ''), times, start: localeStart, end: localeEnd})
+        sessions.push({id, abbr, title, abstract, type, track, trackId, day: dayFromDate, hotel, level, rooms: rooms.replace(' – ', ''), times, start: localeStart, end: localeEnd})
     })
 })
 
