@@ -53,7 +53,7 @@ const tracksMap = {
 
 fs.readdirSync("sessions").forEach(fileName => {
     const [level] = fileName.split("_").map(n => n.replace(".html", "")); //?
-    const [hotel, day] = ["unknown","unknown"]
+    //const [hotel, day] = ["unknown","unknown"]
 
     const file = fs.readFileSync('sessions/' + fileName, {encoding: 'utf-8'});
     const $ = cheerio.load(file)
@@ -65,7 +65,7 @@ fs.readdirSync("sessions").forEach(fileName => {
         const abstract = $('.abstract', elem).text().replace("View Less", "") //?
         const type = $('.type', elem).text() //?
         const speaker = $('.speakers', elem).text() //?
-        const rooms = $('.sessionRoom', elem).text() //?
+        const rooms = $('.sessionRoom', elem).text().replace(' – ', '') //?
         const trackId = abbr.substring(0,3)
         const track = tracksMap[trackId];
         const times = $('.availableSessions', elem).text().replace(rooms, '').replace('Session enrollment has not yet begun.', '')//?
@@ -77,8 +77,11 @@ fs.readdirSync("sessions").forEach(fileName => {
         const localeStart = start.isValid() ? start.format('YYYY-MM-DDTHH:mm:ss') : null
         const localeEnd = end.isValid() ? end.format('YYYY-MM-DDTHH:mm:ss') : null
         const dayFromDate = start.isValid() ? start.locale('en').format('dddd') : "unknown";
+        const split = rooms.split(",")
+        const hotel = rooms.length > 0 ? split[0] : "unknown";
+        console.log(rooms, split, hotel)
 
-        sessions.push({id, abbr, title, abstract, type, track, trackId, day: dayFromDate, hotel, level, rooms: rooms.replace(' – ', ''), times, start: localeStart, end: localeEnd})
+        sessions.push({id, abbr, title, abstract, type, track, trackId, day: dayFromDate, hotel, level, rooms: rooms, times, start: localeStart, end: localeEnd})
     })
 })
 
