@@ -35,7 +35,7 @@ const filterSession = (session: Session, favorites: Favorites, deleted: Deleted,
   if (filters.tracks && filters.tracks.length && filters.tracks.indexOf(session.track) < 0) {
     return false;
   }
-  if (filters.title && filters.title.length && !session.title.toLowerCase().includes(filters.title)) {
+  if (filters.title && filters.title.length && !session.title.toLowerCase().includes(filters.title) && !session.abbr.toLowerCase().includes(filters.title)) {
     return false;
   }
   if (filters.favorites && !favorites[session.id]) {
