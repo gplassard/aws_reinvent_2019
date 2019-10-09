@@ -26,7 +26,7 @@ const SessionFilters: React.FC<Props> = (props: Props) => {
       props.onFiltersChange(props.filters)
     }
 
-    const onSwitch = (field: 'favorites' | 'deletes') => (event: React.ChangeEvent<{}>, checked: boolean) => {
+    const onSwitch = (field: 'favorites' | 'deletes' | 'repeats') => (event: React.ChangeEvent<{}>, checked: boolean) => {
       props.filters[field] = checked;
       props.onFiltersChange(props.filters)
     }
@@ -85,6 +85,11 @@ const SessionFilters: React.FC<Props> = (props: Props) => {
             control= {<Switch/>} 
             onChange={onSwitch('deletes')}
             label="Deleted"/>
+        <FormControlLabel
+            className="switchField"
+            control= {<Switch checked={props.filters.repeats} />} 
+            onChange={onSwitch('repeats')}
+            label="Repeats"/>
           <Chip label={ props.sessionsCount + ' sessions'} color="primary"/>
         </div> 
     );

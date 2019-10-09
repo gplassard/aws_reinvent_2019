@@ -9,6 +9,7 @@ export interface Session {
     day: string;
     hotel: string;
     level: string;
+    repeat: boolean;
     rooms: string;
     times: string;
     start: string | null;
@@ -24,6 +25,7 @@ export interface Filters {
     title: string | null;
     favorites: boolean;
     deletes: boolean;
+    repeats: boolean;
     description: string | null;
 }
 
@@ -35,6 +37,7 @@ export const DEFAULT_FILTERS: Filters =  {
     tracks: [],
     title: null,
     favorites: false,
+    repeats: true,
     deletes: false,
     description: null
 }

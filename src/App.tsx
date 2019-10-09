@@ -47,6 +47,9 @@ const filterSession = (session: Session, favorites: Favorites, deleted: Deleted,
   if (filters.deletes && !deleted[session.id]) {
     return false;
   }
+  if (!filters.repeats && session.repeat) {
+    return false;
+  }
   return true;
 };
 
