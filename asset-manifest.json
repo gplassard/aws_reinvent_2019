@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/aws_reinvent_2019/static/css/main.b0f9d27f.chunk.css",
-    "main.js": "/aws_reinvent_2019/static/js/main.f063b6a9.chunk.js",
-    "main.js.map": "/aws_reinvent_2019/static/js/main.f063b6a9.chunk.js.map",
+    "main.js": "/aws_reinvent_2019/static/js/main.b9c990b6.chunk.js",
+    "main.js.map": "/aws_reinvent_2019/static/js/main.b9c990b6.chunk.js.map",
     "runtime~main.js": "/aws_reinvent_2019/static/js/runtime~main.7e1749d5.js",
     "runtime~main.js.map": "/aws_reinvent_2019/static/js/runtime~main.7e1749d5.js.map",
     "static/css/2.e6d2f65c.chunk.css": "/aws_reinvent_2019/static/css/2.e6d2f65c.chunk.css",
     "static/js/2.2a8ce430.chunk.js": "/aws_reinvent_2019/static/js/2.2a8ce430.chunk.js",
     "static/js/2.2a8ce430.chunk.js.map": "/aws_reinvent_2019/static/js/2.2a8ce430.chunk.js.map",
     "index.html": "/aws_reinvent_2019/index.html",
-    "precache-manifest.e3cd3cd20a0bc78c381507a118551494.js": "/aws_reinvent_2019/precache-manifest.e3cd3cd20a0bc78c381507a118551494.js",
+    "precache-manifest.55723263c6a6f1ffa0663922b10f2a45.js": "/aws_reinvent_2019/precache-manifest.55723263c6a6f1ffa0663922b10f2a45.js",
     "service-worker.js": "/aws_reinvent_2019/service-worker.js",
     "static/css/2.e6d2f65c.chunk.css.map": "/aws_reinvent_2019/static/css/2.e6d2f65c.chunk.css.map",
     "static/css/main.b0f9d27f.chunk.css.map": "/aws_reinvent_2019/static/css/main.b0f9d27f.chunk.css.map"
