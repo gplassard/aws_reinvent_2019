@@ -79,7 +79,7 @@ fs.readdirSync("sessions").forEach(fileName => {
         const dayFromDate = start.isValid() ? start.locale('en').format('dddd') : "unknown";
         const split = rooms.split(",")
         const hotel = rooms.length > 0 ? split[0] : "unknown";
-        const repeat = abbr.includes('-R');
+        const repeat = /-R\d+/.test(abbr);
         console.log(rooms, split, hotel)
 
         sessions.push({id, abbr, title, abstract, type, track, trackId, day: dayFromDate, hotel, level, repeat, rooms: rooms, times, start: localeStart, end: localeEnd})
