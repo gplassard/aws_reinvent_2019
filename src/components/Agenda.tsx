@@ -16,8 +16,8 @@ interface Props {
     hotels: string[]
     favorites:  {[id: string]: boolean}
     deleted: {[id: string]: boolean}
-    onFavorite: (id: string, isFavorite: boolean) => any
-    onDelete: (id: string, isDelete: boolean) => any
+    onFavorite: (session: Session, isFavorite: boolean) => any
+    onDelete: (session: Session, isDelete: boolean) => any
 }
 
 const Agenda: React.FC<Props> = (props: Props) => {

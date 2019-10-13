@@ -8,8 +8,8 @@ interface Props {
     session: Session
     favorite: boolean
     deleted: boolean
-    onFavorite: (id: string, isFavorite: boolean) => any
-    onDelete: (id: string, isDelete: boolean) => any
+    onFavorite: (session: Session, isFavorite: boolean) => any
+    onDelete: (session: Session, isDelete: boolean) => any
 }
 
 const SessionComp: React.FC<Props> = (props: Props) => {

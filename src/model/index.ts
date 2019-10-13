@@ -14,6 +14,7 @@ export interface Session {
     times: string;
     start: string | null;
     end: string | null;
+    repeats: string[];
 }
 
 export interface Filters {
@@ -40,6 +41,14 @@ export const DEFAULT_FILTERS: Filters =  {
     repeats: true,
     deletes: false,
     description: null
+}
+
+export interface Preferences {
+    applyToRepeats: boolean
+}
+
+export const DEFAULT_PREFERENCES: Preferences = {
+    applyToRepeats: false
 }
 
 export type Favorites = {[id: string]: boolean};

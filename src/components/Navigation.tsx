@@ -6,14 +6,19 @@ import './Navigation.scss';
 import { auth } from '../services/FirebaseService';
 import {User} from "firebase";
 import Login from './dialogs/Login';
+import PreferencesDialog from './dialogs/PreferencesDialog';
+import { Preferences } from '../model';
 
 interface Props {
     loggedUser: User | null
+    preferences: Preferences
+    updatePreferences: (preferences: Preferences) => Promise<void>
 }
 
 const Navigation: React.FC<Props> = (props: Props) => {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [loginOpen, setLoginOpen] = React.useState(false);
+    const [preferencesOpen, setPreferencesOpen] = React.useState(false);
 
     function handleClick(event: any) {
       setAnchorEl(event.currentTarget);
@@ -45,6 +50,14 @@ const Navigation: React.FC<Props> = (props: Props) => {
         setLoginOpen(false);
     }
 
+    const preferencesClose = () => {
+        setPreferencesOpen(false);
+    }
+
+    const openPreferences = () => {
+        setPreferencesOpen(true);
+    }
+
     return (
         <React.Fragment>
             <AppBar position="static" className="navigation">
@@ -66,10 +79,12 @@ const Navigation: React.FC<Props> = (props: Props) => {
                         {
                             props.loggedUser === null ? notLoggedIn : loggedIn
                         }
+                         <MenuItem onClick={openPreferences} key="preferences">Preferences</MenuItem>
                     </Menu>
                 </Toolbar>
             </AppBar>
             <Login open={loginOpen} onClose={loginClose}></Login>
+            <PreferencesDialog open={preferencesOpen} onClose={preferencesClose} updatePreferences={props.updatePreferences} preferences={props.preferences}></PreferencesDialog>
         </React.Fragment>
     );
   };

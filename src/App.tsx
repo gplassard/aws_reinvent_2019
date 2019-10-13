@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.scss';
-import { Session, Filters, DEFAULT_FILTERS, Deleted, Favorites } from './model';
+import { Session, Filters, DEFAULT_FILTERS, Deleted, Favorites, Preferences } from './model';
 import Sessions from './components/Sessions';
 import SessionFilters from './components/SessionFilters';
 import Navigation from './components/Navigation';
@@ -15,8 +15,10 @@ interface Props {
   loggedUser: User | null
   favorites: Favorites
   deleted: Deleted
-  onFavorite: (id: string, isFavorite: boolean) => any
-  onDelete: (id: string, isDelete: boolean) => any
+  onFavorite: (session: Session, isFavorite: boolean) => any
+  onDelete: (session: Session, isDelete: boolean) => any
+  preferences: Preferences
+  updatePreferences: (preferences: Preferences) => Promise<void>
 }
 
 const filterSession = (session: Session, favorites: Favorites, deleted: Deleted, filters: Filters) => {
@@ -82,7 +84,7 @@ const App: React.FC<Props> = (props) => {
 
   return (
     <HashRouter>
-      <Navigation loggedUser={props.loggedUser}></Navigation>
+      <Navigation loggedUser={props.loggedUser} updatePreferences={props.updatePreferences} preferences={props.preferences}></Navigation>
       <SessionFilters sessions={props.sessions} filters={filters} onFiltersChange={onFiltersChange} sessionsCount={filteredSessions.length}></SessionFilters>
       <Route path="/" exact component={IndexRender} />
       <Route path="/listing" component={ListingRender} />

@@ -80,12 +80,17 @@ fs.readdirSync("sessions").forEach(fileName => {
         const split = rooms.split(",")
         const hotel = rooms.length > 0 ? split[0] : "unknown";
         const repeat = /-R\d+/.test(abbr);
+        const repeatId = abbr.replace(/-R\d*/, '-R');
         console.log(rooms, split, hotel)
 
-        sessions.push({id, abbr, title, abstract, type, track, trackId, day: dayFromDate, hotel, level, repeat, rooms: rooms, times, start: localeStart, end: localeEnd})
+        sessions.push({id, abbr, title, abstract, type, track, trackId, day: dayFromDate, hotel, level, repeat, repeatId, rooms: rooms, times, start: localeStart, end: localeEnd})
     })
 })
 
 sessions = _.sortBy(_.uniqBy(sessions, 'id'), ['day', 'hotel', 'start']);
+
+const byRepeatId = _.groupBy(sessions, s => s.repeatId)
+
+sessions = sessions.map((s) => ({repeats: byRepeatId[s.repeatId].map(r => r.id), ...s}))
 
 fs.writeFileSync('src/sessions.json', JSON.stringify(sessions, null, 4))

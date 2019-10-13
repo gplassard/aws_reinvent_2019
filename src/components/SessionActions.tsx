@@ -6,8 +6,8 @@ interface Props {
     session: Session
     favorite: boolean
     deleted: boolean
-    onFavorite: (id: string, isFavorite: boolean) => any
-    onDelete: (id: string, isDelete: boolean) => any
+    onFavorite: (session: Session, isFavorite: boolean) => any
+    onDelete: (session: Session, isDelete: boolean) => any
 }
 
 const SessionActions: React.FC<Props> = (props: Props) => {
@@ -15,11 +15,11 @@ const SessionActions: React.FC<Props> = (props: Props) => {
     return (
         <Fragment>
         {props.favorite ? 
-            <Star onClick={() => props.onFavorite(session.id, !props.favorite)} className="clickable"/> : 
-            <StarBorder onClick={() => props.onFavorite(session.id, !props.favorite)} className="clickable"/> }
+            <Star onClick={() => props.onFavorite(session, !props.favorite)} className="clickable"/> : 
+            <StarBorder onClick={() => props.onFavorite(session, !props.favorite)} className="clickable"/> }
           {props.deleted ? 
-            <Delete onClick={() => props.onDelete(session.id, !props.deleted)} className="clickable"/> : 
-            <DeleteOutline onClick={() => props.onDelete(session.id, !props.deleted)} className="clickable"/> }
+            <Delete onClick={() => props.onDelete(session, !props.deleted)} className="clickable"/> : 
+            <DeleteOutline onClick={() => props.onDelete(session, !props.deleted)} className="clickable"/> }
         </Fragment>
     );
   }
