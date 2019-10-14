@@ -996,6 +996,31 @@
     },
     {
         "repeats": [
+            "session_99481",
+            "session_98967",
+            "session_98968",
+            "session_98969",
+            "session_99480"
+        ],
+        "id": "session_99481",
+        "abbr": "DOP332-R4",
+        "title": "[REPEAT 4] Microservices insights with AWS X-Ray",
+        "abstract": "In this session, learn how to easily debug and trace unhandled errors, performance bottlenecks, and customer impact in the distributed nature of a microservices architecture.",
+        "type": "Builders Session",
+        "track": "DevOps",
+        "trackId": "DOP",
+        "day": "Friday",
+        "hotel": "Mirage",
+        "level": "Advanced",
+        "repeat": true,
+        "repeatId": "DOP332-R",
+        "rooms": "Mirage, Grand Ballroom B - Table 3 - T1",
+        "times": "Friday, Dec 6, 11:30 AM - 12:30 PM – ",
+        "start": "2019-12-06T11:30:00",
+        "end": "2019-12-06T12:30:00"
+    },
+    {
+        "repeats": [
             "session_97571",
             "session_97570",
             "session_97569"
@@ -2837,7 +2862,7 @@
         "id": "session_98754",
         "abbr": "SEC335-R",
         "title": "[REPEAT] How to deploy secure workloads with AWS Control Tower",
-        "abstract": "Learn how AWS Control Tower automates the creation of a secure and compliant landing zone with best-practice blueprints for a multi-account structure, identity and federated access management, a central log archive, cross-account security audits, and workflows for provisioning accounts with pre-approved configurations. We discuss guardrails—pre-packaged governance rules created for security, operations, and compliance—that you can apply enterprise-wide or to groups of accounts to enforce policies or detect violations. Finally, learn how to easily manage and monitor all this through the AWS Control Tower dashboard. ",
+        "abstract": "Learn how AWS Control Tower automates the creation of a secure and compliant landing zone with best-practice blueprints for a multi-account structure, identity and federated access management, a central log archive, cross-account security audits, and workflows for provisioning accounts with pre-approved configurations. We discuss guardrails—pre-packaged governance rules created for security, operations, and compliance—that you can apply enterprise-wide or to groups of accounts to enforce policies or detect violations. Finally, learn how to easily manage and monitor all this through the AWS Control Tower dashboard. We encourage you to attend all of the landing zone sessions. Search for \"landing zone\" in the session catalog.\n\n\n \n\n\n  ",
         "type": "Chalk Talk",
         "track": "Security, Compliance, and Identity",
         "trackId": "SEC",
@@ -3395,6 +3420,29 @@
     },
     {
         "repeats": [
+            "session_97592",
+            "session_97593",
+            "session_97594"
+        ],
+        "id": "session_97592",
+        "abbr": "IOT325-R",
+        "title": "[REPEAT] Managing security of large IoT fleets with AWS IoT cloud services",
+        "abstract": "In this session, we dive into managing security of large IoT security fleets across multiple AWS services, including AWS IoT Core and AWS IoT Device Defender. We also provide best practices and reference architectures for keeping your devices secure across multiple locations. ",
+        "type": "Chalk Talk",
+        "track": "IoT",
+        "trackId": "IOT",
+        "day": "Monday",
+        "hotel": "Aria",
+        "level": "Advanced",
+        "repeat": false,
+        "repeatId": "IOT325-R",
+        "rooms": "Aria, Level 1 East, Joshua 3 - T1",
+        "times": "Monday, Dec 2, 11:30 AM - 12:30 PM – ",
+        "start": "2019-12-02T11:30:00",
+        "end": "2019-12-02T12:30:00"
+    },
+    {
+        "repeats": [
             "session_96192"
         ],
         "id": "session_96192",
@@ -3932,6 +3980,30 @@
     },
     {
         "repeats": [
+            "session_99603",
+            "session_99606",
+            "session_99605",
+            "session_99604"
+        ],
+        "id": "session_99603",
+        "abbr": "SEC351-R",
+        "title": "[REPEAT] Getting started with machine learning & data science for security",
+        "abstract": "This builders session is for security professionals who want to start using machine learning and data science techniques to gain insight from their security-related data. We discuss the types of insights these techniques can facilitate (finding repeating patterns, identifying anomalous activity, etc.), and we demonstrate how you can jump-start your efforts to explore your own security-related data by using AWS. Join us if you consider yourself a security professional (with at least a 200-level understanding) who has an introductory familiarity with ML and data science concepts and terminology. ",
+        "type": "Builders Session",
+        "track": "Security, Compliance, and Identity",
+        "trackId": "SEC",
+        "day": "Monday",
+        "hotel": "Aria",
+        "level": "Advanced",
+        "repeat": false,
+        "repeatId": "SEC351-R",
+        "rooms": "Aria, Level 1 West, Bristlecone 2 - Table 3 - T1",
+        "times": "Monday, Dec 2, 1:00 PM - 2:00 PM – ",
+        "start": "2019-12-02T13:00:00",
+        "end": "2019-12-02T14:00:00"
+    },
+    {
+        "repeats": [
             "session_99632",
             "session_99629",
             "session_99630",
@@ -4178,11 +4250,11 @@
     },
     {
         "repeats": [
-            "session_98967",
-            "session_99480",
             "session_99481",
+            "session_98967",
             "session_98968",
-            "session_98969"
+            "session_98969",
+            "session_99480"
         ],
         "id": "session_98967",
         "abbr": "DOP332-R",
@@ -7030,7 +7102,7 @@
         "id": "session_98015",
         "abbr": "SVS341-R",
         "title": "[REPEAT] Meet AWS SAM",
-        "abstract": "In this session, learn how to use the AWS Serverless Application Model (AWS SAM) and the AWS SAM CLI to expediate serverless application development. We work with techniques for local development, local debugging, building, packaging and deployment. We also discuss best practices for code sharing and secret-keeping. ",
+        "abstract": "In this session, we take a tour of AWS Serverless Application Model (AWS SAM) and the AWS SAM CLI. We go beyond the surface of AWS SAM resources and AWS SAM CLI commands and show you how to use them to build quality applications. We cover customized application templates for sharing best practices in your organization, best practices for testing and deploying, IAM policy design, and more. ",
         "type": "Session",
         "track": "Serverless",
         "trackId": "SVS",
@@ -8573,7 +8645,7 @@
         "id": "session_97753",
         "abbr": "SEC324-R",
         "title": "[REPEAT] Deep dive into AWS multi-account strategies",
-        "abstract": "In this session—which concludes the landing-zone track—we explore the design principles behind establishing your landing zone and how to think through the design process around it. This conversation lets you dive deep into the topic and discuss the nuances of the framework and possible implementations. We encourage you to attend the full landing-zone track. ",
+        "abstract": "In this session—which concludes the landing-zone track—we explore the design principles behind establishing your landing zone and how to think through the design process around it. This conversation lets you dive deep into the topic and discuss the nuances of the framework and possible implementations. We encourage you to attend all of the landing zone sessions. Search for \"landing zone\" in the session catalog. ",
         "type": "Chalk Talk",
         "track": "Security, Compliance, and Identity",
         "trackId": "SEC",
@@ -10676,7 +10748,7 @@
         ],
         "id": "session_98624",
         "abbr": "EUC318",
-        "title": "Create an SaaS portal for your desktop app with Amazon AppStream 2",
+        "title": "Create an SaaS portal for your desktop app with Amazon AppStream 2.0",
         "abstract": "In this session, learn how you can embed your desktop application in a web portal using Amazon AppStream 2.0 to create an SaaS solution.",
         "type": "Builders Session",
         "track": "End User Computing & Business Apps",
@@ -10694,8 +10766,8 @@
     {
         "repeats": [
             "session_97648",
-            "session_97651",
             "session_97649",
+            "session_97651",
             "session_97650"
         ],
         "id": "session_97648",
@@ -11069,6 +11141,31 @@
         "repeat": false,
         "repeatId": "DOP330-R",
         "rooms": "Mirage, Events Center C1 - Table 2 - T1",
+        "times": "Monday, Dec 2, 4:00 PM - 5:00 PM – ",
+        "start": "2019-12-02T16:00:00",
+        "end": "2019-12-02T17:00:00"
+    },
+    {
+        "repeats": [
+            "session_98956",
+            "session_98952",
+            "session_98955",
+            "session_98953",
+            "session_98954"
+        ],
+        "id": "session_98952",
+        "abbr": "DOP336-R",
+        "title": "[REPEAT] Serverless app infrastructure with the AWS Cloud Development Kit (AWS CDK)",
+        "abstract": "The AWS Cloud Development Kit (AWS CDK) is a multi-language, open-source framework that lets developers harness the full power of familiar programming languages to define reusable cloud components and provision applications built from those components using AWS CloudFormation. In this session, you develop an application as well as learn how to assemble your AWS infrastructure while leveraging the Python language-focused version of the AWS CDK. Finally, we explore the AWS Construct Library and show you how easy it is to configure your cloud resources, manage permissions, connect event sources, and build and publish your own constructs. ",
+        "type": "Builders Session",
+        "track": "DevOps",
+        "trackId": "DOP",
+        "day": "Monday",
+        "hotel": "Mirage",
+        "level": "Advanced",
+        "repeat": false,
+        "repeatId": "DOP336-R",
+        "rooms": "Mirage, Grand Ballroom B - Table 8 - T1",
         "times": "Monday, Dec 2, 4:00 PM - 5:00 PM – ",
         "start": "2019-12-02T16:00:00",
         "end": "2019-12-02T17:00:00"
@@ -12107,7 +12204,7 @@
         ],
         "id": "session_98993",
         "abbr": "SEC343-R",
-        "title": "[REPEAT] Security innovations: Continuous resource access knowledge",
+        "title": "[REPEAT] Provable access control: Know who can access your AWS resources",
         "abstract": "The AWS Automated Reasoning Group focuses on strengthening the security foundations of AWS and provides customers with tools to verify their own security posture. In this session, we discuss the evolution of automated reasoning technology at AWS and how it works in the services in which it is embedded, including Amazon Simple Storage Service (Amazon S3), AWS Config, and Amazon Macie. Learn what's ahead for automated reasoning at AWS and the customer problems it continues to solve in the security and broader cloud space. ",
         "type": "Session",
         "track": "Security, Compliance, and Identity",
@@ -12151,7 +12248,7 @@
         "id": "session_96189",
         "abbr": "MDS202-R",
         "title": "[REPEAT] Optimizing live video feeds to the cloud and the consumer",
-        "abstract": "Live sporting events are a vital part of the over-the-top (OTT) landscape, with passionate fans and big expectations. Viewers want more coverage on more devices, with ultra-high-definition and high-dynamic-range experiences. They demand low, broadcast-like latency that lets them enjoy the action without delay, and features like enhanced graphics and real-time stats that go beyond traditional TV offerings. Beyond that, they want the next big thing, whatever it may be, as soon as it’s available to consumers. Learn how today’s top broadcasters and content providers are serving these demanding audiences with media solutions, machine learning, and core services from AWS. ",
+        "abstract": "Viewers want more content on more devices, with top quality and low, broadcast-like latency allowing them to enjoy the action without delay. They also demand features such as enhanced graphics and real-time stats that go beyond traditional TV offerings. Learn how Discovery delivers live cooking classes with America’s favorite chefs on its Food Network Kitchen platform, and multi-language/multi-market sports on its Eurosport platform. This talk explores how today’s top content providers like Discovery are serving audiences with media solutions, machine learning, and core services from AWS. ",
         "type": "Session",
         "track": "Media Solutions",
         "trackId": "MDS",
@@ -13652,6 +13749,119 @@
         "times": "Monday, Dec 2, 7:00 PM - 8:00 PM – ",
         "start": "2019-12-02T19:00:00",
         "end": "2019-12-02T20:00:00"
+    },
+    {
+        "repeats": [
+            "session_98977",
+            "session_98978",
+            "session_98979"
+        ],
+        "id": "session_98978",
+        "abbr": "DOP334-R1",
+        "title": "[REPEAT 1] Set up a serverless app using React and AWS Amplify",
+        "abstract": "In this session, we show you how to easily build a fully functional, secure cloud-native application in hours rather than in days or weeks. Learn how to use AWS Cloud9, a cloud-based IDE, to build a serverless cloud-native application in React using the AWS Mobile Hub via the AWS Mobile CLI and AWS Amplify. ",
+        "type": "Builders Session",
+        "track": "DevOps",
+        "trackId": "DOP",
+        "day": "Monday",
+        "hotel": "unknown",
+        "level": "Advanced",
+        "repeat": true,
+        "repeatId": "DOP334-R",
+        "rooms": "",
+        "times": "",
+        "start": "2019-10-14T01:00:00",
+        "end": "2019-10-14T01:00:00"
+    },
+    {
+        "repeats": [
+            "session_98970",
+            "session_98951",
+            "session_98971"
+        ],
+        "id": "session_98951",
+        "abbr": "DOP335-R2",
+        "title": "[REPEAT 2] Set up CI/CD for AWS Fargate with AWS CodePipeline",
+        "abstract": "In this session, you learn how to set up a CI/CD pipeline for AWS Fargate with AWS CodePipeline.",
+        "type": "Builders Session",
+        "track": "DevOps",
+        "trackId": "DOP",
+        "day": "Monday",
+        "hotel": "unknown",
+        "level": "Advanced",
+        "repeat": true,
+        "repeatId": "DOP335-R",
+        "rooms": "",
+        "times": "",
+        "start": "2019-10-14T01:00:00",
+        "end": "2019-10-14T01:00:00"
+    },
+    {
+        "repeats": [
+            "session_98626"
+        ],
+        "id": "session_98626",
+        "abbr": "EUC320",
+        "title": "Dive deep into Amazon Connect reporting and metrics",
+        "abstract": "Providing end-to-end reporting of your contact-center data often requires processing and querying a collection of data sources with different record structures. In this builders session, you learn how to leverage Amazon Connect with other AWS services to create a unified data repository. Learn how to use AWS Glue to crawl your data sources and discover different schemas, then drill down into the details with Amazon Athena, and leverage Amazon QuickSight business-intelligence service to easily create and publish analytical dashboards to your business owners. Bring your laptop if you want to build in this session. ",
+        "type": "Builders Session",
+        "track": "End User Computing & Business Apps",
+        "trackId": "EUC",
+        "day": "Monday",
+        "hotel": "unknown",
+        "level": "Advanced",
+        "repeat": false,
+        "repeatId": "EUC320",
+        "rooms": "",
+        "times": "",
+        "start": "2019-10-14T01:00:00",
+        "end": "2019-10-14T01:00:00"
+    },
+    {
+        "repeats": [
+            "session_97648",
+            "session_97649",
+            "session_97651",
+            "session_97650"
+        ],
+        "id": "session_97649",
+        "abbr": "IOT316-R1",
+        "title": "[REPEAT 1] Building an end-to-end, real-time IoT analytics pipeline",
+        "abstract": "In this session, learn how you can build an end-to-end pipeline for real-time analytics for health data (e.g., heart rate), including how to analyze and visualize the data. We also show you how to train machine-learning models to detect anomalies and how to respond to the anomalies and update device configuration as an action (feedback loop). ",
+        "type": "Builders Session",
+        "track": "IoT",
+        "trackId": "IOT",
+        "day": "Monday",
+        "hotel": "unknown",
+        "level": "Advanced",
+        "repeat": true,
+        "repeatId": "IOT316-R",
+        "rooms": "",
+        "times": "",
+        "start": "2019-10-14T01:00:00",
+        "end": "2019-10-14T01:00:00"
+    },
+    {
+        "repeats": [
+            "session_97497",
+            "session_97498"
+        ],
+        "id": "session_97497",
+        "abbr": "NET317-R",
+        "title": "[REPEAT] Connectivity to AWS and hybrid AWS network architectures",
+        "abstract": "Amazon offers multiple options to achieve your connectivity requirements to access your resources in AWS. Whether you are connecting your corporate office or on-premises data center into AWS for hybrid connectivity or your personal device for end-user connectivity, AWS has many options for you to pick and choose. This session is intended for anyone wanting to get an overview of the AWS connectivity options available to you and learn about the best practices for architecting your connectivity to AWS. ",
+        "type": "Session",
+        "track": "Networking & Content Delivery",
+        "trackId": "NET",
+        "day": "Monday",
+        "hotel": "unknown",
+        "level": "Advanced",
+        "repeat": false,
+        "repeatId": "NET317-R",
+        "rooms": "",
+        "times": "",
+        "start": "2019-10-14T01:00:00",
+        "end": "2019-10-14T01:00:00"
     },
     {
         "repeats": [
@@ -16634,263 +16844,6 @@
     },
     {
         "repeats": [
-            "session_95818",
-            "session_95819"
-        ],
-        "id": "session_95818",
-        "abbr": "DAT334-R",
-        "title": "[REPEAT] Advanced design patterns for Amazon DynamoDB",
-        "abstract": "Join us for a practical hands-on workshop on using Amazon DynamoDB. This session is designed for developers, engineers, and database administrators who are involved in designing and maintaining DynamoDB applications. We begin with a walk-through of proven NoSQL design patterns for at-scale applications. Next, we use step-by-step instructions to apply lessons learned to design DynamoDB tables and indexes that are optimized for performance and cost. Expect to leave this session with the knowledge needed to build and monitor DynamoDB applications that can grow to any size and scale. ",
-        "type": "Workshop",
-        "track": "Databases",
-        "trackId": "DAT",
-        "day": "Sunday",
-        "hotel": "unknown",
-        "level": "Advanced",
-        "repeat": false,
-        "repeatId": "DAT334-R",
-        "rooms": "",
-        "times": "",
-        "start": "2019-10-13T01:00:00",
-        "end": "2019-10-13T01:00:00"
-    },
-    {
-        "repeats": [
-            "session_98967",
-            "session_99480",
-            "session_99481",
-            "session_98968",
-            "session_98969"
-        ],
-        "id": "session_99480",
-        "abbr": "DOP332-R3",
-        "title": "[REPEAT 3] Microservices insights with AWS X-Ray",
-        "abstract": "In this session, learn how to easily debug and trace unhandled errors, performance bottlenecks, and customer impact in the distributed nature of a microservices architecture.",
-        "type": "Builders Session",
-        "track": "DevOps",
-        "trackId": "DOP",
-        "day": "Sunday",
-        "hotel": "unknown",
-        "level": "Advanced",
-        "repeat": true,
-        "repeatId": "DOP332-R",
-        "rooms": "",
-        "times": "",
-        "start": "2019-10-13T01:00:00",
-        "end": "2019-10-13T01:00:00"
-    },
-    {
-        "repeats": [
-            "session_98967",
-            "session_99480",
-            "session_99481",
-            "session_98968",
-            "session_98969"
-        ],
-        "id": "session_99481",
-        "abbr": "DOP332-R4",
-        "title": "[REPEAT 4] Microservices insights with AWS X-Ray",
-        "abstract": "In this session, learn how to easily debug and trace unhandled errors, performance bottlenecks, and customer impact in the distributed nature of a microservices architecture.",
-        "type": "Builders Session",
-        "track": "DevOps",
-        "trackId": "DOP",
-        "day": "Sunday",
-        "hotel": "unknown",
-        "level": "Advanced",
-        "repeat": true,
-        "repeatId": "DOP332-R",
-        "rooms": "",
-        "times": "",
-        "start": "2019-10-13T01:00:00",
-        "end": "2019-10-13T01:00:00"
-    },
-    {
-        "repeats": [
-            "session_98970",
-            "session_98951",
-            "session_98971"
-        ],
-        "id": "session_98951",
-        "abbr": "DOP335-R2",
-        "title": "[REPEAT 2] Set up CI/CD for AWS Fargate with AWS CodePipeline",
-        "abstract": "In this session, you learn how to set up a CI/CD pipeline for AWS Fargate with AWS CodePipeline.",
-        "type": "Builders Session",
-        "track": "DevOps",
-        "trackId": "DOP",
-        "day": "Sunday",
-        "hotel": "unknown",
-        "level": "Advanced",
-        "repeat": true,
-        "repeatId": "DOP335-R",
-        "rooms": "",
-        "times": "",
-        "start": "2019-10-13T01:00:00",
-        "end": "2019-10-13T01:00:00"
-    },
-    {
-        "repeats": [
-            "session_98956",
-            "session_98952",
-            "session_98955",
-            "session_98953",
-            "session_98954"
-        ],
-        "id": "session_98952",
-        "abbr": "DOP336-R",
-        "title": "[REPEAT] Serverless app infrastructure with the AWS Cloud Development Kit (AWS CDK)",
-        "abstract": "The AWS Cloud Development Kit (AWS CDK) is a multi-language, open-source framework that lets developers harness the full power of familiar programming languages to define reusable cloud components and provision applications built from those components using AWS CloudFormation. In this session, you develop an application as well as learn how to assemble your AWS infrastructure while leveraging the Python language-focused version of the AWS CDK. Finally, we explore the AWS Construct Library and show you how easy it is to configure your cloud resources, manage permissions, connect event sources, and build and publish your own constructs. ",
-        "type": "Builders Session",
-        "track": "DevOps",
-        "trackId": "DOP",
-        "day": "Sunday",
-        "hotel": "unknown",
-        "level": "Advanced",
-        "repeat": false,
-        "repeatId": "DOP336-R",
-        "rooms": "",
-        "times": "",
-        "start": "2019-10-13T01:00:00",
-        "end": "2019-10-13T01:00:00"
-    },
-    {
-        "repeats": [
-            "session_97592",
-            "session_97593",
-            "session_97594"
-        ],
-        "id": "session_97592",
-        "abbr": "IOT325-R",
-        "title": "[REPEAT] Managing security of large IoT fleets with AWS IoT cloud services",
-        "abstract": "In this session, we dive into managing security of large IoT security fleets across multiple AWS services, including AWS IoT Core and AWS IoT Device Defender. We also provide best practices and reference architectures for keeping your devices secure across multiple locations. ",
-        "type": "Chalk Talk",
-        "track": "IoT",
-        "trackId": "IOT",
-        "day": "Sunday",
-        "hotel": "unknown",
-        "level": "Advanced",
-        "repeat": false,
-        "repeatId": "IOT325-R",
-        "rooms": "",
-        "times": "",
-        "start": "2019-10-13T01:00:00",
-        "end": "2019-10-13T01:00:00"
-    },
-    {
-        "repeats": [
-            "session_99603",
-            "session_99606",
-            "session_99605",
-            "session_99604"
-        ],
-        "id": "session_99603",
-        "abbr": "SEC351-R",
-        "title": "[REPEAT] Getting started with machine learning & data science for security",
-        "abstract": "This builders session is for security professionals who want to start using machine learning and data science techniques to gain insight from their security-related data. We discuss the types of insights these techniques can facilitate (finding repeating patterns, identifying anomalous activity, etc.), and we demonstrate how you can jump-start your efforts to explore your own security-related data by using AWS. Join us if you consider yourself a security professional (with at least a 200-level understanding) who has an introductory familiarity with ML and data science concepts and terminology. ",
-        "type": "Builders Session",
-        "track": "Security, Compliance, and Identity",
-        "trackId": "SEC",
-        "day": "Sunday",
-        "hotel": "unknown",
-        "level": "Advanced",
-        "repeat": false,
-        "repeatId": "SEC351-R",
-        "rooms": "",
-        "times": "",
-        "start": "2019-10-13T01:00:00",
-        "end": "2019-10-13T01:00:00"
-    },
-    {
-        "repeats": [
-            "session_98039",
-            "session_98042",
-            "session_98040",
-            "session_98041"
-        ],
-        "id": "session_98042",
-        "abbr": "SVS328-R3",
-        "title": "[REPEAT 3] Build a CI/CD pipeline for serverless applications",
-        "abstract": "In this session, learn how to use AWS CodeCommit, AWS CodeBuild, AWS CodeDeploy, and AWS CodePipeline to continuously deploy serverless applications with safe deployment and traffic shifting patterns. ",
-        "type": "Builders Session",
-        "track": "Serverless",
-        "trackId": "SVS",
-        "day": "Sunday",
-        "hotel": "unknown",
-        "level": "Advanced",
-        "repeat": true,
-        "repeatId": "SVS328-R",
-        "rooms": "",
-        "times": "",
-        "start": "2019-10-13T01:00:00",
-        "end": "2019-10-13T01:00:00"
-    },
-    {
-        "repeats": [
-            "session_98053",
-            "session_98054"
-        ],
-        "id": "session_98053",
-        "abbr": "SVS334-R",
-        "title": "[REPEAT] Build a serverless ASP.NET application",
-        "abstract": "In this session, you use AWS Serverless Application Model (AWS SAM) to build and deploy serverless C# ASP.NET application that writes into an Amazon DynamoDB table. The application uses the web UI hosted by Amazon Cognito for authentication OpenID to process the JSON web token (JWT). ",
-        "type": "Builders Session",
-        "track": "Serverless",
-        "trackId": "SVS",
-        "day": "Sunday",
-        "hotel": "unknown",
-        "level": "Advanced",
-        "repeat": false,
-        "repeatId": "SVS334-R",
-        "rooms": "",
-        "times": "",
-        "start": "2019-10-13T01:00:00",
-        "end": "2019-10-13T01:00:00"
-    },
-    {
-        "repeats": [
-            "session_98053",
-            "session_98054"
-        ],
-        "id": "session_98054",
-        "abbr": "SVS334-R1",
-        "title": "[REPEAT 1] Build a serverless ASP.NET application",
-        "abstract": "In this session, you use AWS Serverless Application Model (AWS SAM) to build and deploy serverless C# ASP.NET application that writes into an Amazon DynamoDB table. The application uses the web UI hosted by Amazon Cognito for authentication OpenID to process the JSON web token (JWT). ",
-        "type": "Builders Session",
-        "track": "Serverless",
-        "trackId": "SVS",
-        "day": "Sunday",
-        "hotel": "unknown",
-        "level": "Advanced",
-        "repeat": true,
-        "repeatId": "SVS334-R",
-        "rooms": "",
-        "times": "",
-        "start": "2019-10-13T01:00:00",
-        "end": "2019-10-13T01:00:00"
-    },
-    {
-        "repeats": [
-            "session_96592",
-            "session_96593"
-        ],
-        "id": "session_96593",
-        "abbr": "SVS340-R1",
-        "title": "[REPEAT 1] Building scalable ecommerce workflows with Step Functions",
-        "abstract": "In this workshop, learn how to build a highly scalable retail backend platform using AWS Step Functions. We show you how to use several serverless services to build different workflows for different functionalities, including order processing, billing, notifications, and return notifications. We cover the basics, advanced patterns, and best practices for using AWS Step Functions, including local development and deployment automation using the AWS Cloud Development Kit (AWS CDK). ",
-        "type": "Workshop",
-        "track": "Serverless",
-        "trackId": "SVS",
-        "day": "Sunday",
-        "hotel": "unknown",
-        "level": "Advanced",
-        "repeat": true,
-        "repeatId": "SVS340-R",
-        "rooms": "",
-        "times": "",
-        "start": "2019-10-13T01:00:00",
-        "end": "2019-10-13T01:00:00"
-    },
-    {
-        "repeats": [
             "session_98837",
             "session_98836",
             "session_98835"
@@ -17003,8 +16956,8 @@
     {
         "repeats": [
             "session_97648",
-            "session_97651",
             "session_97649",
+            "session_97651",
             "session_97650"
         ],
         "id": "session_97651",
@@ -20283,6 +20236,28 @@
     },
     {
         "repeats": [
+            "session_96592",
+            "session_96593"
+        ],
+        "id": "session_96593",
+        "abbr": "SVS340-R1",
+        "title": "[REPEAT 1] Building scalable ecommerce workflows with Step Functions",
+        "abstract": "In this workshop, learn how to build a highly scalable retail backend platform using AWS Step Functions. We show you how to use several serverless services to build different workflows for different functionalities, including order processing, billing, notifications, and return notifications. We cover the basics, advanced patterns, and best practices for using AWS Step Functions, including local development and deployment automation using the AWS Cloud Development Kit (AWS CDK). ",
+        "type": "Workshop",
+        "track": "Serverless",
+        "trackId": "SVS",
+        "day": "Thursday",
+        "hotel": "MGM",
+        "level": "Advanced",
+        "repeat": true,
+        "repeatId": "SVS340-R",
+        "rooms": "MGM, Level 1, Grand Ballroom 122 - T1",
+        "times": "Thursday, Dec 5, 2:30 PM - 4:45 PM – ",
+        "start": "2019-12-05T14:30:00",
+        "end": "2019-12-05T16:45:00"
+    },
+    {
+        "repeats": [
             "session_97198",
             "session_95433"
         ],
@@ -20535,28 +20510,6 @@
     },
     {
         "repeats": [
-            "session_98012",
-            "session_98011"
-        ],
-        "id": "session_98012",
-        "abbr": "SVS316-R1",
-        "title": "[REPEAT 1] A serverless journey: AWS Lambda under the hood",
-        "abstract": "Serverless computing allows you to build and run applications and services without thinking about servers. Serverless applications don't require you to provision, scale, and manage any servers. However, under the hood, there is a sophisticated architecture that takes care of all the undifferentiated heavy lifting for the developer. Join Holly Mesrobian, director of engineering, and Marc Brooker, senior principal of engineering, to learn how AWS architected one of its fastest-growing services. In this session, we show you how AWS Lambda takes care of everything required to run and scale your code with high availability. ",
-        "type": "Session",
-        "track": "Serverless",
-        "trackId": "SVS",
-        "day": "Thursday",
-        "hotel": "MGM",
-        "level": "Advanced",
-        "repeat": true,
-        "repeatId": "SVS316-R",
-        "rooms": "MGM, Level 3, Premier Ballroom 313 - T2",
-        "times": "Thursday, Dec 5, 3:15 PM - 4:15 PM – ",
-        "start": "2019-12-05T15:15:00",
-        "end": "2019-12-05T16:15:00"
-    },
-    {
-        "repeats": [
             "session_96925",
             "session_98941"
         ],
@@ -20598,6 +20551,28 @@
         "times": "Thursday, Dec 5, 3:15 PM - 5:30 PM – ",
         "start": "2019-12-05T15:15:00",
         "end": "2019-12-05T17:30:00"
+    },
+    {
+        "repeats": [
+            "session_98012",
+            "session_98011"
+        ],
+        "id": "session_98012",
+        "abbr": "SVS405-R1",
+        "title": "[REPEAT 1] A serverless journey: AWS Lambda under the hood",
+        "abstract": "Serverless computing allows you to build and run applications and services without thinking about servers. Serverless applications don't require you to provision, scale, and manage any servers. However, under the hood, there is a sophisticated architecture that takes care of all the undifferentiated heavy lifting for the developer. Join Holly Mesrobian, director of engineering, and Marc Brooker, senior principal of engineering, to learn how AWS architected one of its fastest-growing services. In this session, we show you how AWS Lambda takes care of everything required to run and scale your code with high availability. ",
+        "type": "Session",
+        "track": "Serverless",
+        "trackId": "SVS",
+        "day": "Thursday",
+        "hotel": "MGM",
+        "level": "Expert",
+        "repeat": true,
+        "repeatId": "SVS405-R",
+        "rooms": "MGM, Level 3, Premier Ballroom 313 - T2",
+        "times": "Thursday, Dec 5, 3:15 PM - 4:15 PM – ",
+        "start": "2019-12-05T15:15:00",
+        "end": "2019-12-05T16:15:00"
     },
     {
         "repeats": [
@@ -20782,8 +20757,8 @@
         ],
         "id": "session_98342",
         "abbr": "SEC325-R1",
-        "title": "[REPEAT 1] Architecting security & governance- A multi-account strategy",
-        "abstract": "A key element of your AWS environment is having a framework to provide resource isolation, separation of duties, and clear billing separation (i.e., a landing zone). In this session, we discuss updates to multi-account strategy best practices for establishing your landing zone, new guidance for building organizational unit structures, and a historical context. We cover security patterns, such as identity federation, cross-account roles, consolidated logging, and account governance. We wrap up with considerations on using AWS Landing Zone, AWS Control Tower, or AWS Organizations. We encourage you to attend the full landing-zone track. ",
+        "title": "[REPEAT 1] Architecting security & governance across your landing zone",
+        "abstract": "A key element of your AWS environment is having a framework to provide resource isolation, separation of duties, and clear billing separation (i.e., a landing zone). In this session, we discuss updates to multi-account strategy best practices for establishing your landing zone, new guidance for building organizational unit structures, and a historical context. We cover security patterns, such as identity federation, cross-account roles, consolidated logging, and account governance. We wrap up with considerations on using AWS Landing Zone, AWS Control Tower, or AWS Organizations. We encourage you to attend all the landing zone sessions. Search for \"landing zone\" in the session catalog. ",
         "type": "Session",
         "track": "Security, Compliance, and Identity",
         "trackId": "SEC",
@@ -21400,6 +21375,30 @@
         "repeat": true,
         "repeatId": "SVS309-R",
         "rooms": "Mirage, Grand Ballroom F - T1",
+        "times": "Thursday, Dec 5, 1:00 PM - 2:00 PM – ",
+        "start": "2019-12-05T13:00:00",
+        "end": "2019-12-05T14:00:00"
+    },
+    {
+        "repeats": [
+            "session_98039",
+            "session_98042",
+            "session_98040",
+            "session_98041"
+        ],
+        "id": "session_98042",
+        "abbr": "SVS328-R3",
+        "title": "[REPEAT 3] Build a CI/CD pipeline for serverless applications",
+        "abstract": "In this session, learn how to use AWS CodeCommit, AWS CodeBuild, AWS CodeDeploy, and AWS CodePipeline to continuously deploy serverless applications with safe deployment and traffic shifting patterns. ",
+        "type": "Builders Session",
+        "track": "Serverless",
+        "trackId": "SVS",
+        "day": "Thursday",
+        "hotel": "Mirage",
+        "level": "Advanced",
+        "repeat": true,
+        "repeatId": "SVS328-R",
+        "rooms": "Mirage, Grand Ballroom B - Table 5 - T1",
         "times": "Thursday, Dec 5, 1:00 PM - 2:00 PM – ",
         "start": "2019-12-05T13:00:00",
         "end": "2019-12-05T14:00:00"
@@ -23143,7 +23142,7 @@
         ],
         "id": "session_98984",
         "abbr": "SEC339",
-        "title": "WarnerMedia: Threat hunting in AWS",
+        "title": "Actionable threat hunting in AWS",
         "abstract": "Learn how WarnerMedia leveraged Amazon GuardDuty, AWS CloudTrail, and its own serverless inventory tool (Antiope) to root out cloud vulnerabilities, insecure behavior, and potential account compromise activities across a large number of accounts. We cover how WarnerMedia centralizes and automates its security tooling, offer detailed Splunk queries for GuardDuty and CloudTrail, and discuss how Antiope is used for vulnerability hunting. We cover the scaling issues incurred during a large enterprise merger. Leave this session with a strategy and an actionable set of detections for finding potential data breaches and account compromises. ",
         "type": "Session",
         "track": "Security, Compliance, and Identity",
@@ -25743,6 +25742,28 @@
     },
     {
         "repeats": [
+            "session_98053",
+            "session_98054"
+        ],
+        "id": "session_98053",
+        "abbr": "SVS334-R",
+        "title": "[REPEAT] Build a serverless ASP.NET application",
+        "abstract": "In this session, you use AWS Serverless Application Model (AWS SAM) to build and deploy serverless C# ASP.NET application that writes into an Amazon DynamoDB table. The application uses the web UI hosted by Amazon Cognito for authentication OpenID to process the JSON web token (JWT). ",
+        "type": "Builders Session",
+        "track": "Serverless",
+        "trackId": "SVS",
+        "day": "Tuesday",
+        "hotel": "Aria",
+        "level": "Advanced",
+        "repeat": false,
+        "repeatId": "SVS334-R",
+        "rooms": "Aria, Level 1 West, Bristlecone 2 - Table 3 - T1",
+        "times": "Tuesday, Dec 3, 11:30 AM - 12:30 PM – ",
+        "start": "2019-12-03T11:30:00",
+        "end": "2019-12-03T12:30:00"
+    },
+    {
+        "repeats": [
             "session_96687",
             "session_96688"
         ],
@@ -26693,29 +26714,6 @@
         "repeat": true,
         "repeatId": "DOP331-R",
         "rooms": "Aria, Level 1 West, Bristlecone 2 - Table 1 - T1",
-        "times": "Tuesday, Dec 3, 2:30 PM - 3:30 PM – ",
-        "start": "2019-12-03T14:30:00",
-        "end": "2019-12-03T15:30:00"
-    },
-    {
-        "repeats": [
-            "session_98977",
-            "session_98978",
-            "session_98979"
-        ],
-        "id": "session_98978",
-        "abbr": "DOP334-R1",
-        "title": "[REPEAT 1] Set up a serverless app using React and AWS Amplify",
-        "abstract": "In this session, we show you how to easily build a fully functional, secure cloud-native application in hours rather than in days or weeks. Learn how to use AWS Cloud9, a cloud-based IDE, to build a serverless cloud-native application in React using the AWS Mobile Hub via the AWS Mobile CLI and AWS Amplify. ",
-        "type": "Builders Session",
-        "track": "DevOps",
-        "trackId": "DOP",
-        "day": "Tuesday",
-        "hotel": "Aria",
-        "level": "Advanced",
-        "repeat": true,
-        "repeatId": "DOP334-R",
-        "rooms": "Aria, Level 1 West, Bristlecone 2 - Table 4 - T1",
         "times": "Tuesday, Dec 3, 2:30 PM - 3:30 PM – ",
         "start": "2019-12-03T14:30:00",
         "end": "2019-12-03T15:30:00"
@@ -29876,28 +29874,6 @@
     },
     {
         "repeats": [
-            "session_97497",
-            "session_97498"
-        ],
-        "id": "session_97497",
-        "abbr": "NET317-R",
-        "title": "[REPEAT] Connectivity to AWS and hybrid AWS network architectures",
-        "abstract": "Amazon offers multiple options to achieve your connectivity requirements to access your resources in AWS. Whether you are connecting your corporate office or on-premises data center into AWS for hybrid connectivity or your personal device for end-user connectivity, AWS has many options for you to pick and choose. This session is intended for anyone wanting to get an overview of the AWS connectivity options available to you and learn about the best practices for architecting your connectivity to AWS. ",
-        "type": "Session",
-        "track": "Networking & Content Delivery",
-        "trackId": "NET",
-        "day": "Tuesday",
-        "hotel": "MGM",
-        "level": "Advanced",
-        "repeat": false,
-        "repeatId": "NET317-R",
-        "rooms": "MGM, Level 3, Premier Ballroom 313 - T2",
-        "times": "Tuesday, Dec 3, 3:15 PM - 4:15 PM – ",
-        "start": "2019-12-03T15:15:00",
-        "end": "2019-12-03T16:15:00"
-    },
-    {
-        "repeats": [
             "session_97181",
             "session_97182"
         ],
@@ -32339,11 +32315,11 @@
     },
     {
         "repeats": [
-            "session_98967",
-            "session_99480",
             "session_99481",
+            "session_98967",
             "session_98968",
-            "session_98969"
+            "session_98969",
+            "session_99480"
         ],
         "id": "session_98968",
         "abbr": "DOP332-R1",
@@ -32381,30 +32357,6 @@
         "repeat": true,
         "repeatId": "IOT315-R",
         "rooms": "Mirage, Events Center C1 - Table 7 - T1",
-        "times": "Tuesday, Dec 3, 5:30 PM - 6:30 PM – ",
-        "start": "2019-12-03T17:30:00",
-        "end": "2019-12-03T18:30:00"
-    },
-    {
-        "repeats": [
-            "session_97648",
-            "session_97651",
-            "session_97649",
-            "session_97650"
-        ],
-        "id": "session_97649",
-        "abbr": "IOT316-R1",
-        "title": "[REPEAT 1] Building an end-to-end, real-time IoT analytics pipeline",
-        "abstract": "In this session, learn how you can build an end-to-end pipeline for real-time analytics for health data (e.g., heart rate), including how to analyze and visualize the data. We also show you how to train machine-learning models to detect anomalies and how to respond to the anomalies and update device configuration as an action (feedback loop). ",
-        "type": "Builders Session",
-        "track": "IoT",
-        "trackId": "IOT",
-        "day": "Tuesday",
-        "hotel": "Mirage",
-        "level": "Advanced",
-        "repeat": true,
-        "repeatId": "IOT316-R",
-        "rooms": "Mirage, Events Center C1 - Table 9 - T1",
         "times": "Tuesday, Dec 3, 5:30 PM - 6:30 PM – ",
         "start": "2019-12-03T17:30:00",
         "end": "2019-12-03T18:30:00"
@@ -32722,6 +32674,28 @@
         "times": "Tuesday, Dec 3, 11:30 AM - 12:30 PM – ",
         "start": "2019-12-03T11:30:00",
         "end": "2019-12-03T12:30:00"
+    },
+    {
+        "repeats": [
+            "session_95818",
+            "session_95819"
+        ],
+        "id": "session_95818",
+        "abbr": "DAT334-R",
+        "title": "[REPEAT] Advanced design patterns for Amazon DynamoDB",
+        "abstract": "Join us for a practical hands-on workshop on using Amazon DynamoDB. This session is designed for developers, engineers, and database administrators who are involved in designing and maintaining DynamoDB applications. We begin with a walk-through of proven NoSQL design patterns for at-scale applications. Next, we use step-by-step instructions to apply lessons learned to design DynamoDB tables and indexes that are optimized for performance and cost. Expect to leave this session with the knowledge needed to build and monitor DynamoDB applications that can grow to any size and scale. ",
+        "type": "Workshop",
+        "track": "Databases",
+        "trackId": "DAT",
+        "day": "Tuesday",
+        "hotel": "Venetian | Palazzo",
+        "level": "Advanced",
+        "repeat": false,
+        "repeatId": "DAT334-R",
+        "rooms": "Venetian | Palazzo, Level 3, San Polo 3402 - T2",
+        "times": "Tuesday, Dec 3, 12:15 PM - 2:30 PM – ",
+        "start": "2019-12-03T12:15:00",
+        "end": "2019-12-03T14:30:00"
     },
     {
         "repeats": [
@@ -33553,7 +33527,7 @@
         "id": "session_97754",
         "abbr": "SEC324-R1",
         "title": "[REPEAT 1] Deep dive into AWS multi-account strategies",
-        "abstract": "In this session—which concludes the landing-zone track—we explore the design principles behind establishing your landing zone and how to think through the design process around it. This conversation lets you dive deep into the topic and discuss the nuances of the framework and possible implementations. We encourage you to attend the full landing-zone track. ",
+        "abstract": "In this session—which concludes the landing-zone track—we explore the design principles behind establishing your landing zone and how to think through the design process around it. This conversation lets you dive deep into the topic and discuss the nuances of the framework and possible implementations. We encourage you to attend all of the landing zone sessions. Search for \"landing zone\" in the session catalog. ",
         "type": "Chalk Talk",
         "track": "Security, Compliance, and Identity",
         "trackId": "SEC",
@@ -36805,7 +36779,7 @@
         "id": "session_98016",
         "abbr": "SVS341-R1",
         "title": "[REPEAT 1] Meet AWS SAM",
-        "abstract": "In this session, learn how to use the AWS Serverless Application Model (AWS SAM) and the AWS SAM CLI to expediate serverless application development. We work with techniques for local development, local debugging, building, packaging and deployment. We also discuss best practices for code sharing and secret-keeping. ",
+        "abstract": "In this session, we take a tour of AWS Serverless Application Model (AWS SAM) and the AWS SAM CLI. We go beyond the surface of AWS SAM resources and AWS SAM CLI commands and show you how to use them to build quality applications. We cover customized application templates for sharing best practices in your organization, best practices for testing and deploying, IAM policy design, and more. ",
         "type": "Session",
         "track": "Serverless",
         "trackId": "SVS",
@@ -37407,27 +37381,6 @@
     },
     {
         "repeats": [
-            "session_98626"
-        ],
-        "id": "session_98626",
-        "abbr": "EUC320",
-        "title": "Dive deep into Amazon Connect reporting and metrics",
-        "abstract": "Providing end-to-end reporting of your contact-center data often requires processing and querying a collection of data sources with different record structures. In this builders session, you learn how to leverage Amazon Connect with other AWS services to create a unified data repository. Learn how to use AWS Glue to crawl your data sources and discover different schemas, then drill down into the details with Amazon Athena, and leverage Amazon QuickSight business-intelligence service to easily create and publish analytical dashboards to your business owners. Bring your laptop if you want to build in this session. ",
-        "type": "Builders Session",
-        "track": "End User Computing & Business Apps",
-        "trackId": "EUC",
-        "day": "Wednesday",
-        "hotel": "Aria",
-        "level": "Advanced",
-        "repeat": false,
-        "repeatId": "EUC320",
-        "rooms": "Aria, Level 1 West, Bristlecone 2 - Table 1 - T1",
-        "times": "Wednesday, Dec 4, 10:00 AM - 11:00 AM – ",
-        "start": "2019-12-04T10:00:00",
-        "end": "2019-12-04T11:00:00"
-    },
-    {
-        "repeats": [
             "session_97592",
             "session_97593",
             "session_97594"
@@ -37771,11 +37724,11 @@
     },
     {
         "repeats": [
-            "session_98967",
-            "session_99480",
             "session_99481",
+            "session_98967",
             "session_98968",
-            "session_98969"
+            "session_98969",
+            "session_99480"
         ],
         "id": "session_98969",
         "abbr": "DOP332-R2",
@@ -38269,7 +38222,7 @@
         "id": "session_97238",
         "abbr": "MDS202-R1",
         "title": "[REPEAT 1] Optimizing live video feeds to the cloud and the consumer",
-        "abstract": "Live sporting events are a vital part of the over-the-top (OTT) landscape, with passionate fans and big expectations. Viewers want more coverage on more devices, with ultra-high-definition and high-dynamic-range experiences. They demand low, broadcast-like latency that lets them enjoy the action without delay, and features like enhanced graphics and real-time stats that go beyond traditional TV offerings. Beyond that, they want the next big thing, whatever it may be, as soon as it’s available to consumers. Learn how today’s top broadcasters and content providers are serving these demanding audiences with media solutions, machine learning, and core services from AWS. ",
+        "abstract": "Viewers want more content on more devices, with top quality and low, broadcast-like latency allowing them to enjoy the action without delay. They also demand features such as enhanced graphics and real-time stats that go beyond traditional TV offerings. Learn how Discovery delivers live cooking classes with America’s favorite chefs on its Food Network Kitchen platform, and multi-language/multi-market sports on its Eurosport platform. This talk explores how today’s top content providers like Discovery are serving audiences with media solutions, machine learning, and core services from AWS. ",
         "type": "Session",
         "track": "Media Solutions",
         "trackId": "MDS",
@@ -39386,6 +39339,28 @@
     },
     {
         "repeats": [
+            "session_98053",
+            "session_98054"
+        ],
+        "id": "session_98054",
+        "abbr": "SVS334-R1",
+        "title": "[REPEAT 1] Build a serverless ASP.NET application",
+        "abstract": "In this session, you use AWS Serverless Application Model (AWS SAM) to build and deploy serverless C# ASP.NET application that writes into an Amazon DynamoDB table. The application uses the web UI hosted by Amazon Cognito for authentication OpenID to process the JSON web token (JWT). ",
+        "type": "Builders Session",
+        "track": "Serverless",
+        "trackId": "SVS",
+        "day": "Wednesday",
+        "hotel": "Aria",
+        "level": "Advanced",
+        "repeat": true,
+        "repeatId": "SVS334-R",
+        "rooms": "Aria, Level 1 West, Bristlecone 4 - Table 8 - T2",
+        "times": "Wednesday, Dec 4, 3:15 PM - 4:15 PM – ",
+        "start": "2019-12-04T15:15:00",
+        "end": "2019-12-04T16:15:00"
+    },
+    {
+        "repeats": [
             "session_96687",
             "session_96688"
         ],
@@ -39652,8 +39627,8 @@
     {
         "repeats": [
             "session_97648",
-            "session_97651",
             "session_97649",
+            "session_97651",
             "session_97650"
         ],
         "id": "session_97650",
@@ -41149,7 +41124,7 @@
         "id": "session_98755",
         "abbr": "SEC335-R1",
         "title": "[REPEAT 1] How to deploy secure workloads with AWS Control Tower",
-        "abstract": "Learn how AWS Control Tower automates the creation of a secure and compliant landing zone with best-practice blueprints for a multi-account structure, identity and federated access management, a central log archive, cross-account security audits, and workflows for provisioning accounts with pre-approved configurations. We discuss guardrails—pre-packaged governance rules created for security, operations, and compliance—that you can apply enterprise-wide or to groups of accounts to enforce policies or detect violations. Finally, learn how to easily manage and monitor all this through the AWS Control Tower dashboard. ",
+        "abstract": "Learn how AWS Control Tower automates the creation of a secure and compliant landing zone with best-practice blueprints for a multi-account structure, identity and federated access management, a central log archive, cross-account security audits, and workflows for provisioning accounts with pre-approved configurations. We discuss guardrails—pre-packaged governance rules created for security, operations, and compliance—that you can apply enterprise-wide or to groups of accounts to enforce policies or detect violations. Finally, learn how to easily manage and monitor all this through the AWS Control Tower dashboard. We encourage you to attend all of the landing zone sessions. Search for \"landing zone\" in the session catalog.\n\n\n \n\n\n  ",
         "type": "Chalk Talk",
         "track": "Security, Compliance, and Identity",
         "trackId": "SEC",
@@ -41321,7 +41296,7 @@
         ],
         "id": "session_98994",
         "abbr": "SEC343-R1",
-        "title": "[REPEAT 1] Security innovations: Continuous resource access knowledge",
+        "title": "[REPEAT 1] Provable access control: Know who can access your AWS resources",
         "abstract": "The AWS Automated Reasoning Group focuses on strengthening the security foundations of AWS and provides customers with tools to verify their own security posture. In this session, we discuss the evolution of automated reasoning technology at AWS and how it works in the services in which it is embedded, including Amazon Simple Storage Service (Amazon S3), AWS Config, and Amazon Macie. Learn what's ahead for automated reasoning at AWS and the customer problems it continues to solve in the security and broader cloud space. ",
         "type": "Session",
         "track": "Security, Compliance, and Identity",
@@ -42180,8 +42155,8 @@
         ],
         "id": "session_98648",
         "abbr": "EUC206",
-        "title": "Amazon Pinpoint: Where we’ve been and where we’re going",
-        "abstract": "In today's digital marketplace, an ever-increasing number of brands compete for your customers’ attention. In this session, learn how AWS technologies empower developers, marketers, and business users to form meaningful, long-lasting connections with their customers. You get to see demos of the latest Amazon Pinpoint features and hear from Coinbase about how Amazon Pinpoint powers its customer interactions. ",
+        "title": "How AWS is defining the future of engagement and messaging",
+        "abstract": "In this session, we describe how AWS is building upon Amazon’s customer-centric culture of innovation to help you better engage your own customers. Hear how Coinbase uses Amazon Pinpoint as a core engagement service to delight its customers and grow its business. ",
         "type": "Session",
         "track": "End User Computing & Business Apps",
         "trackId": "EUC",
@@ -45179,8 +45154,8 @@
         ],
         "id": "session_97755",
         "abbr": "SEC325-R",
-        "title": "[REPEAT] Architecting security & governance- A multi-account strategy",
-        "abstract": "A key element of your AWS environment is having a framework to provide resource isolation, separation of duties, and clear billing separation (i.e., a landing zone). In this session, we discuss updates to multi-account strategy best practices for establishing your landing zone, new guidance for building organizational unit structures, and a historical context. We cover security patterns, such as identity federation, cross-account roles, consolidated logging, and account governance. We wrap up with considerations on using AWS Landing Zone, AWS Control Tower, or AWS Organizations. We encourage you to attend the full landing-zone track. ",
+        "title": "[REPEAT] Architecting security & governance across your landing zone",
+        "abstract": "A key element of your AWS environment is having a framework to provide resource isolation, separation of duties, and clear billing separation (i.e., a landing zone). In this session, we discuss updates to multi-account strategy best practices for establishing your landing zone, new guidance for building organizational unit structures, and a historical context. We cover security patterns, such as identity federation, cross-account roles, consolidated logging, and account governance. We wrap up with considerations on using AWS Landing Zone, AWS Control Tower, or AWS Organizations. We encourage you to attend all the landing zone sessions. Search for \"landing zone\" in the session catalog. ",
         "type": "Session",
         "track": "Security, Compliance, and Identity",
         "trackId": "SEC",
@@ -46017,6 +45992,31 @@
         "repeat": true,
         "repeatId": "DOP329-R",
         "rooms": "Mirage, Grand Ballroom B - Table 10 - T1",
+        "times": "Wednesday, Dec 4, 4:00 PM - 5:00 PM – ",
+        "start": "2019-12-04T16:00:00",
+        "end": "2019-12-04T17:00:00"
+    },
+    {
+        "repeats": [
+            "session_99481",
+            "session_98967",
+            "session_98968",
+            "session_98969",
+            "session_99480"
+        ],
+        "id": "session_99480",
+        "abbr": "DOP332-R3",
+        "title": "[REPEAT 3] Microservices insights with AWS X-Ray",
+        "abstract": "In this session, learn how to easily debug and trace unhandled errors, performance bottlenecks, and customer impact in the distributed nature of a microservices architecture.",
+        "type": "Builders Session",
+        "track": "DevOps",
+        "trackId": "DOP",
+        "day": "Wednesday",
+        "hotel": "Mirage",
+        "level": "Advanced",
+        "repeat": true,
+        "repeatId": "DOP332-R",
+        "rooms": "Mirage, Grand Ballroom B - Table 6 - T1",
         "times": "Wednesday, Dec 4, 4:00 PM - 5:00 PM – ",
         "start": "2019-12-04T16:00:00",
         "end": "2019-12-04T17:00:00"
@@ -46924,7 +46924,7 @@
         ],
         "id": "session_98127",
         "abbr": "CON213-L",
-        "title": "Leadership session: Containers",
+        "title": "Leadership session: Containers and Serverless",
         "abstract": "Amazon offers the broadest and deepest portfolio of container services in the industry. In this session, learn more about the latest container services from AWS.",
         "type": "Session",
         "track": "Containers",
@@ -47511,28 +47511,6 @@
     },
     {
         "repeats": [
-            "session_98012",
-            "session_98011"
-        ],
-        "id": "session_98011",
-        "abbr": "SVS316-R",
-        "title": "[REPEAT] A serverless journey: AWS Lambda under the hood",
-        "abstract": "Serverless computing allows you to build and run applications and services without thinking about servers. Serverless applications don't require you to provision, scale, and manage any servers. However, under the hood, there is a sophisticated architecture that takes care of all the undifferentiated heavy lifting for the developer. Join Holly Mesrobian, director of engineering, and Marc Brooker, senior principal of engineering, to learn how AWS architected one of its fastest-growing services. In this session, we show you how AWS Lambda takes care of everything required to run and scale your code with high availability. ",
-        "type": "Session",
-        "track": "Serverless",
-        "trackId": "SVS",
-        "day": "Wednesday",
-        "hotel": "Venetian | Palazzo",
-        "level": "Advanced",
-        "repeat": false,
-        "repeatId": "SVS316-R",
-        "rooms": "Venetian | Palazzo, Level 2, Venetian | Palazzo E - T1",
-        "times": "Wednesday, Dec 4, 1:00 PM - 2:00 PM – ",
-        "start": "2019-12-04T13:00:00",
-        "end": "2019-12-04T14:00:00"
-    },
-    {
-        "repeats": [
             "session_98023",
             "session_98024",
             "session_98025"
@@ -47550,6 +47528,28 @@
         "repeat": true,
         "repeatId": "SVS321-R",
         "rooms": "Venetian | Palazzo, Level 2, Veronese 2406 - T1",
+        "times": "Wednesday, Dec 4, 1:00 PM - 2:00 PM – ",
+        "start": "2019-12-04T13:00:00",
+        "end": "2019-12-04T14:00:00"
+    },
+    {
+        "repeats": [
+            "session_98012",
+            "session_98011"
+        ],
+        "id": "session_98011",
+        "abbr": "SVS405-R",
+        "title": "[REPEAT] A serverless journey: AWS Lambda under the hood",
+        "abstract": "Serverless computing allows you to build and run applications and services without thinking about servers. Serverless applications don't require you to provision, scale, and manage any servers. However, under the hood, there is a sophisticated architecture that takes care of all the undifferentiated heavy lifting for the developer. Join Holly Mesrobian, director of engineering, and Marc Brooker, senior principal of engineering, to learn how AWS architected one of its fastest-growing services. In this session, we show you how AWS Lambda takes care of everything required to run and scale your code with high availability. ",
+        "type": "Session",
+        "track": "Serverless",
+        "trackId": "SVS",
+        "day": "Wednesday",
+        "hotel": "Venetian | Palazzo",
+        "level": "Expert",
+        "repeat": false,
+        "repeatId": "SVS405-R",
+        "rooms": "Venetian | Palazzo, Level 2, Venetian | Palazzo E - T1",
         "times": "Wednesday, Dec 4, 1:00 PM - 2:00 PM – ",
         "start": "2019-12-04T13:00:00",
         "end": "2019-12-04T14:00:00"
