@@ -40,8 +40,8 @@ const sleep = seconds =>
 
   console.log("logged in")
 
-  await page.waitForSelector('nav > #mainNav > #ui-id-5 > .ui-menu-item > #ui-id-6')
-  await page.click('nav > #mainNav > #ui-id-5 > .ui-menu-item > #ui-id-6')
+  await page.waitForSelector('#ui-id-7')
+  await page.click('#ui-id-7')
 
   /*
   console.log("before days")
