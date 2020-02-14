@@ -1,17 +1,25 @@
 {
   "files": {
-    "main.css": "/aws_reinvent_2019/static/css/main.47cc9c73.chunk.css",
-    "main.js": "/aws_reinvent_2019/static/js/main.3a2e52b6.chunk.js",
-    "main.js.map": "/aws_reinvent_2019/static/js/main.3a2e52b6.chunk.js.map",
-    "runtime~main.js": "/aws_reinvent_2019/static/js/runtime~main.7e1749d5.js",
-    "runtime~main.js.map": "/aws_reinvent_2019/static/js/runtime~main.7e1749d5.js.map",
-    "static/css/2.9566b982.chunk.css": "/aws_reinvent_2019/static/css/2.9566b982.chunk.css",
-    "static/js/2.5257f301.chunk.js": "/aws_reinvent_2019/static/js/2.5257f301.chunk.js",
-    "static/js/2.5257f301.chunk.js.map": "/aws_reinvent_2019/static/js/2.5257f301.chunk.js.map",
+    "main.css": "/aws_reinvent_2019/static/css/main.f1dc5f75.chunk.css",
+    "main.js": "/aws_reinvent_2019/static/js/main.7e8ed83c.chunk.js",
+    "main.js.map": "/aws_reinvent_2019/static/js/main.7e8ed83c.chunk.js.map",
+    "runtime-main.js": "/aws_reinvent_2019/static/js/runtime-main.de3a804c.js",
+    "runtime-main.js.map": "/aws_reinvent_2019/static/js/runtime-main.de3a804c.js.map",
+    "static/css/2.56a0b8af.chunk.css": "/aws_reinvent_2019/static/css/2.56a0b8af.chunk.css",
+    "static/js/2.a30d8da6.chunk.js": "/aws_reinvent_2019/static/js/2.a30d8da6.chunk.js",
+    "static/js/2.a30d8da6.chunk.js.map": "/aws_reinvent_2019/static/js/2.a30d8da6.chunk.js.map",
     "index.html": "/aws_reinvent_2019/index.html",
-    "precache-manifest.d062724ba7205d35dfe86848d264af95.js": "/aws_reinvent_2019/precache-manifest.d062724ba7205d35dfe86848d264af95.js",
+    "precache-manifest.409ec15e161d57871d778da0ebeafaa9.js": "/aws_reinvent_2019/precache-manifest.409ec15e161d57871d778da0ebeafaa9.js",
     "service-worker.js": "/aws_reinvent_2019/service-worker.js",
-    "static/css/2.9566b982.chunk.css.map": "/aws_reinvent_2019/static/css/2.9566b982.chunk.css.map",
-    "static/css/main.47cc9c73.chunk.css.map": "/aws_reinvent_2019/static/css/main.47cc9c73.chunk.css.map"
-  }
+    "static/css/2.56a0b8af.chunk.css.map": "/aws_reinvent_2019/static/css/2.56a0b8af.chunk.css.map",
+    "static/css/main.f1dc5f75.chunk.css.map": "/aws_reinvent_2019/static/css/main.f1dc5f75.chunk.css.map",
+    "static/js/2.a30d8da6.chunk.js.LICENSE.txt": "/aws_reinvent_2019/static/js/2.a30d8da6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.de3a804c.js",
+    "static/css/2.56a0b8af.chunk.css",
+    "static/js/2.a30d8da6.chunk.js",
+    "static/css/main.f1dc5f75.chunk.css",
+    "static/js/main.7e8ed83c.chunk.js"
+  ]
 }
